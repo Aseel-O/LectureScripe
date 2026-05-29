@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# requirements-cluster.txt
+# A100 SXM4-80GB (shared, 20 GB limit)  |  CUDA 12.2  |  Python 3.11+
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Install with:
+#   pip install -r requirements-cluster.txt
+#
+# PyTorch must be installed from the CUDA 12.1 index (closest stable build
+# to CUDA 12.2 — fully forward-compatible, standard practice on HPC clusters).
+# Run this line FIRST, before pip install -r:
+#
+#   pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 \
+#       --index-url https://download.pytorch.org/whl/cu121
+#
+# If the cluster uses environment modules, activate CUDA first:
+#   module load cuda/12.2
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── HuggingFace Stack (Version-Aligned to Prevent Import Errors) ──────────────
+transformers==4.44.2        # WhisperForConditionalGeneration, Seq2SeqTrainer
+                            # Pin fixed to 4.44.2 to guarantee EncoderDecoderCache 
+                            # top-level visibility for PEFT without triggering 
+                            # breaking continuous batching device_mesh errors.
+peft==0.12.0                 # LoraConfig, get_peft_model, PeftModel
+                            # Matched explicitly to 4.44.x to ensure robust macro bindings.
+datasets>=2.18.0             # Dataset, DatasetDict operations
+accelerate==0.34.2           # Backend for Trainer device placement + bf16 scaling
+evaluate>=0.4.1              # Framework engine for WER / CER metrics tracking
+huggingface-hub
+
+# ── Audio Processing & Feature Extraction ─────────────────────────────────────
+jiwer>=3.0.3                 # For evaluating ASR quality via Word Error Rate (WER)
+soundfile>=0.12.1            # Core audio file I/O backend for lecture decoding
+librosa>=0.10.1              # High-level feature extraction and array processing
+scipy>=1.10.0                # Essential numerical math dependency required by librosa
+
+# ── Metrics, Diagnostics, & Logging ───────────────────────────────────────────
+# System Resource Profile:
+#   Model: Whisper large-v3 + LoRA adapters
+#   Training precision: bfloat16
+#   Batch size configurations: 4 per device, 4 gradient accumulation steps
+#   Peak VRAM utilization: ~13 GB — stays safely within your 20 GB cluster limit.
+#   ────────────────────────────────────────────────────────────────────────────
+tensorboard>=2.16.0          # Training curve tracking via (--report_to tensorboard)
+google-genai>=0.1.0          # For summary formatting and code-switch text handling
+seaborn>=0.12.2              # Informative data visualization for evaluation matrix reporting
+
+# ── Infrastructure Utilities ──────────────────────────────────────────────────
+numpy>=1.24.0,<2.0.0         # Strictly kept below 2.0.0 to prevent breaking changes 
+                            # in older Hugging Face internal multidimensional arrays.
+tqdm>=4.66.0                 # CLI progress indicators for epoch evaluation loops
+regex>=2023.12.25            # Pattern matching for clean multilingual normalization
+packaging>=23.0              # Version dependency checking parsing utilities
+safetensors>=0.3.1           # High-speed model checkpoint serialization and fast IO
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Cluster System Dependency Note:
+#   Many HPC systems require external media codecs to process raw sound data.
+#   Request via your system administrator or check your environment module paths:
+#     module load ffmpeg   OR   apt-get install ffmpeg
+#
+#   ffmpeg is explicitly required by librosa for parsing native MP3/M4A logs.
+#   Verify if it exists on your current shell using: which ffmpeg
+# ══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,12 @@
+# Audio Processing Library
+# Provides MP3/WAV encoding, decoding, and audio manipulation
+pydub
+
+# PyTorch Audio Processing
+# Used for reading audio metadata and format information in verification scripts
+torchaudio
+torch
+
+# Progress Bars (Optional)
+# Used for visual feedback during processing of large audio files
+tqdm

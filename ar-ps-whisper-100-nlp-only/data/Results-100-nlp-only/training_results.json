@@ -1,0 +1,55 @@
+{
+  "profile": "local_test",
+  "model_id": "openai/whisper-large-v3",
+  "language": "arabic",
+  "task": "transcribe",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "training": {
+    "num_epochs": 10,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "effective_batch_size": 16,
+    "learning_rate": 0.0001,
+    "lr_scheduler": "linear",
+    "warmup_steps": 5
+  },
+  "dataset": {
+    "jsonl_path": "data/dataset_final.jsonl",
+    "total_records": 100,
+    "train_segments": 80,
+    "dev_segments": 10,
+    "test_segments": 10,
+    "seed": 42
+  },
+  "train_metrics": {
+    "train_runtime": 2809.1689,
+    "train_samples_per_second": 0.285,
+    "train_steps_per_second": 0.018,
+    "total_flos": 2.732494159872e+18,
+    "train_loss": 4.6899150323867795,
+    "epoch": 10.0
+  },
+  "test_metrics": {
+    "test_loss": 0.5448797941207886,
+    "test_wer": 0.3214,
+    "test_cer": 0.1845,
+    "test_wer_norm": 0.1813,
+    "test_cer_norm": 0.1138,
+    "test_runtime": 33.8129,
+    "test_samples_per_second": 0.296,
+    "test_steps_per_second": 0.148,
+    "epoch": 10.0
+  },
+  "output_dirs": {
+    "lora_adapter": "./whisper-lora-ar-ps/final_adapter",
+    "merged_model": "./whisper-merged-ar-ps"
+  }
+}

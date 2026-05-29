@@ -1,0 +1,69 @@
+
+Evaluation vs. Model-Specific Reference (Each model on hand-corrected transcripts)
+==================================================================================
+  Run                         Model       ROUGE-1    ROUGE-2    ROUGE-L    BERTScore-F1
+----------------------------------------------------------------------------------
+  Baseline Whisper            mBART        0.2692     0.1116     0.1700       0.5862
+  Baseline Whisper            AraBART      0.3156     0.0752     0.1670       0.6035
+  Baseline Whisper            Qwen         0.4661     0.1569     0.3071       0.7313
+  Fine-tuned Whisper          mBART        0.2493     0.0625     0.1557       0.6511
+  Fine-tuned Whisper          AraBART      0.3649     0.0523     0.1599       0.7062
+  Fine-tuned Whisper          Qwen         0.5008     0.2690     0.3842       0.7452
+----------------------------------------------------------------------------------
+  Reference (upper bound)     Self         1.0000     1.0000     1.0000       1.0000
+==================================================================================
+
+Within-run model agreement vs Qwen (ROUGE-1 | ROUGE-2 | ROUGE-L | BERTScore-F1):
+  Baseline Whisper            mBART     0.0462 | 0.0234 | 0.0462 | 0.4699
+  Baseline Whisper            AraBART   0.0580 | 0.0154 | 0.0482 | 0.4800
+  Fine-tuned Whisper          mBART     0.0908 | 0.0069 | 0.0627 | 0.4611
+  Fine-tuned Whisper          AraBART   0.0288 | 0.0050 | 0.0216 | 0.4564
+
+Interpretation:
+  Fine-tuned vs Baseline (Qwen): ROUGE-1 +0.0347 | ROUGE-2 +0.1121 | ROUGE-L +0.0771 | BERTScore +0.0139
+  -> Fine-tuned transcripts produce summaries 25.1% closer to the reference than baseline transcripts.
+  Fine-tuned vs Baseline (mBART): ROUGE-1 -0.0199 | ROUGE-2 -0.0491 | ROUGE-L -0.0143 | BERTScore +0.0649
+  Fine-tuned vs Baseline (AraBART): ROUGE-1 +0.0493 | ROUGE-2 -0.0229 | ROUGE-L -0.0071 | BERTScore +0.1027
+  Baseline -- Qwen produces summaries closest to the reference. (Qwen: 0.3071  |  mBART: 0.1700  |  AraBART: 0.1670)
+  Fine-tuned -- Qwen produces summaries closest to the reference. (Qwen: 0.3842  |  AraBART: 0.1599  |  mBART: 0.1557)
+  Overall cascade interpretation (Model-Internal / Self-Reference):  Each model is scored against its OWN summary of the hand-corrected transcripts.  This isolates the impact of ASR noise on the model's structural and stylistic  consistency. A positive ROUGE-L delta means the fine-tuned acoustic model  helps the summarizer maintain its native performance.
+
+==================================================================================
+  CODE-SWITCHING METRICS
+  (CMI = Code-Mixing Index [0=monolingual, 0.5=perfectly interleaved])
+  (MLU-switch = Mean tokens between language switches [lower = more switching])
+  (EN-ratio = fraction of language tokens that are English)
+==================================================================================
+
+  TRANSCRIPT-LEVEL CS METRICS (exact, from transcripts.json)
+  ----------------------------------------------------------------------------
+  Baseline Whisper              CMI=0.1061  EN-ratio=0.1061  MLU-switch=9.98  (n=2)
+  Fine-tuned Whisper            CMI=0.2160  EN-ratio=0.2160  MLU-switch=4.98  (n=2)
+  Reference (hand-corrected)    CMI=0.2456  EN-ratio=0.2456  MLU-switch=4.21  (n=2)
+
+  Fine-tuned vs Baseline transcript delta:  EN-ratio +0.1099  CMI +0.1099  MLU-switch -5.00
+  ----------------------------------------------------------------------------
+
+  [Baseline Whisper]
+  Transcript  (approx): CMI≈0.0056  EN-ratio≈0.0056  MLU-switch=N/A  (n=2)
+  mBART     summary:       CMI=0.1053  EN-ratio=0.1053  MLU-switch=21.09  (n=2)
+  AraBART   summary:       CMI=0.0921  EN-ratio=0.0921  MLU-switch=11.54  (n=2)
+  Qwen      summary:       CMI=0.1514  EN-ratio=0.1514  MLU-switch=4.62  (n=2)
+
+  [Fine-tuned Whisper]
+  Transcript  (approx): CMI≈0.0059  EN-ratio≈0.0059  MLU-switch=N/A  (n=2)
+  mBART     summary:       CMI=0.1563  EN-ratio=0.1563  MLU-switch=7.74  (n=2)
+  AraBART   summary:       CMI=0.2112  EN-ratio=0.2112  MLU-switch=5.17  (n=2)
+  Qwen      summary:       CMI=0.0729  EN-ratio=0.0729  MLU-switch=15.24  (n=2)
+
+  [Reference (hand-corrected)]
+  Transcript  (approx): CMI≈0.0068  EN-ratio≈0.0068  MLU-switch=N/A  (n=2)
+  mBART     summary:       CMI=0.2145  EN-ratio=0.2145  MLU-switch=7.47  (n=2)
+  AraBART   summary:       CMI=0.2017  EN-ratio=0.2017  MLU-switch=6.75  (n=2)
+  Qwen      summary:       CMI=0.1711  EN-ratio=0.1711  MLU-switch=5.56  (n=2)
+
+  Fine-tuned vs Baseline delta (EN-ratio in summaries):
+  mBART     EN-ratio +0.0510  CMI +0.0510
+  AraBART   EN-ratio +0.1191  CMI +0.1191
+  Qwen      EN-ratio -0.0785  CMI -0.0785
+==================================================================================

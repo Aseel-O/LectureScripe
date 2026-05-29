@@ -1,0 +1,6 @@
+{
+  "name": "Lecture Annotation Tool",
+  "description": "Transcription and manual annotation platform for dialect-specific (Palestinian Arabic and English) voice segments of AI and technology lectures.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,11 @@
+{
+    "epoch": 11.0,
+    "test_cer": 0.1976,
+    "test_cer_norm": 0.1385,
+    "test_loss": 0.48261719942092896,
+    "test_runtime": 87.9687,
+    "test_samples_per_second": 0.455,
+    "test_steps_per_second": 0.114,
+    "test_wer": 0.3265,
+    "test_wer_norm": 0.2411
+}

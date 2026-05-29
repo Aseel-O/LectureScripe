@@ -1,0 +1,180 @@
+/* ExportButton.css
+ *
+ * Styles for the Whisper dataset export button and its progress/error states.
+ * Designed to match the dark academic / terminal aesthetic of the
+ * Lecture Annotation Tool.
+ *
+ * Import in your app:
+ *   import "./components/ExportButton.css";
+ * or paste into your global CSS / tailwind @layer components block.
+ */
+
+/* ── Wrapper ─────────────────────────────────────────────────────────────── */
+.export-btn-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: "IBM Plex Mono", "Fira Code", "Courier New", monospace;
+}
+
+/* ── Button ──────────────────────────────────────────────────────────────── */
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.1rem;
+  border: 1.5px solid #4ade80;          /* emerald-400 — Whisper brand green */
+  background: transparent;
+  color: #4ade80;
+  font-family: inherit;
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.export-btn:hover:not(:disabled) {
+  background: #4ade8018;
+  box-shadow: 0 0 12px #4ade8033;
+}
+
+.export-btn:focus-visible {
+  outline: 2px solid #4ade80;
+  outline-offset: 3px;
+}
+
+.export-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* State variants */
+.export-btn--converting,
+.export-btn--zipping {
+  border-color: #facc15;   /* amber — active processing */
+  color: #facc15;
+  animation: export-pulse 1.2s ease-in-out infinite;
+}
+
+.export-btn--done {
+  border-color: #86efac;
+  color: #86efac;
+}
+
+.export-btn--error {
+  border-color: #f87171;
+  color: #f87171;
+}
+
+@keyframes export-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/* ── Spinning icon ───────────────────────────────────────────────────────── */
+.export-btn__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.export-btn--converting .export-btn__icon,
+.export-btn--zipping .export-btn__icon {
+  display: inline-block;
+  animation: export-spin 0.9s linear infinite;
+}
+
+@keyframes export-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Segment count badge ─────────────────────────────────────────────────── */
+.export-btn__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding: 0 0.3rem;
+  margin-left: 0.25rem;
+  background: #4ade8022;
+  border: 1px solid #4ade8066;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────── */
+.export-progress {
+  position: relative;
+  height: 4px;
+  background: #1f2937;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.export-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #facc15, #fde68a);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.export-progress__label {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+}
+
+/* ── Error message ───────────────────────────────────────────────────────── */
+.export-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  background: #450a0a;
+  border: 1px solid #f87171;
+  border-radius: 3px;
+  color: #fca5a5;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.export-error__dismiss {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #f87171;
+  color: #fca5a5;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.export-error__dismiss:hover {
+  background: #f8717118;
+}
+
+/* ── Hint text ───────────────────────────────────────────────────────────── */
+.export-hint {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+}
+
+.export-hint code {
+  color: #9ca3af;
+  background: #111827;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  font-family: inherit;
+}

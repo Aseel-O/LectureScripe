@@ -1,0 +1,910 @@
+========================================================================
+TRANSCRIPTION REPORT
+========================================================================
+Fine-tuned model : ./whisper-merged-ar-ps
+Baseline model   : openai/whisper-large-v3
+Audio directory  : data/audio
+Lectures         : 2
+Total segments   : 200
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lecture : NLP_20260221
+  Segments total  : 121
+  Flagged         : 4
+  Duration        : 2657.1 s
+  Segs w/ ref     : 121
+
+  Model                      WER (raw)   WER (norm)  CER (raw)
+  ───────────────────────── ────────── ──────────── ──────────
+  Baseline (large-v3)           0.7493       0.6305     0.4969
+  Fine-tuned                    0.4138       0.2999     0.1729
+  Improvement                  +0.3355      +0.3306    +0.3240
+
+  Auto-flagged segments:
+    segment_162: ['no_arabic (arabic_ratio=0.00)']
+    segment_171: ['too_sparse (wps=0.28)', 'high_cer (cer=1.31)']
+    segment_202: ['empty_transcript', 'too_sparse (wps=0.05)', 'high_cer (cer=0.95)']
+    segment_224: ['repetition_loop (ratio=0.74)', 'high_cer (cer=0.97)']
+
+  Segment details:
+  ID                   Dur(s)   WER-FT   WER-BL   CER-FT  Flag
+  ──────────────────── ────── ──────── ──────── ──────── ─────
+  segment_101            23.9   0.4571   0.7429   0.1171    no
+  segment_102            23.6   0.4359   0.8718   0.2018    no
+  segment_103            24.3   0.2979   0.6170   0.1548    no
+  segment_104            21.4   0.3243   0.5676   0.1094    no
+  segment_105            23.8   0.3611   0.5278   0.0966    no
+  segment_106            23.4   0.2857   0.7381   0.0943    no
+  segment_107            19.9   0.4444   0.6667   0.1705    no
+  segment_108            21.3   0.3250   0.7250   0.0928    no
+  segment_109            24.5   0.5116   0.6512   0.2161    no
+  segment_110            23.8   0.4565   0.6739   0.1446    no
+  segment_111            23.3   0.4583   0.7917   0.1661    no
+  segment_112            23.8   0.3636   0.6364   0.1485    no
+  segment_113            24.2   0.5758   0.8182   0.2332    no
+  segment_114            24.8   0.2653   0.5918   0.0992    no
+  segment_115            24.0   0.4167   0.6389   0.2065    no
+  segment_116            22.1   0.7667   0.9000   0.2941    no
+  segment_117            21.1   0.2308   0.5385   0.0887    no
+  segment_118            24.1   0.4138   0.9138   0.1712    no
+  segment_119            23.1   0.3784   0.7568   0.1064    no
+  segment_120            20.2   0.3962   1.3774   0.1812    no
+  segment_121            20.4   0.3667   0.7333   0.1146    no
+  segment_122            15.6   0.4737   0.5263   0.1546    no
+  segment_123            15.5   0.6786   0.7143   0.3515    no
+  segment_124            23.0   0.3143   0.7714   0.1368    no
+  segment_125            24.5   0.4444   0.6481   0.1900    no
+  segment_126            14.2   0.6316   0.7895   0.2673    no
+  segment_127            17.6   0.4762   0.6190   0.1847    no
+  segment_128            20.2   0.5667   0.7333   0.1959    no
+  segment_129            22.2   0.3667   0.5667   0.1494    no
+  segment_130            24.2   0.5208   0.6667   0.3154    no
+  segment_131            23.4   0.3333   0.6667   0.1411    no
+  segment_132            14.7   0.4545   0.4848   0.1271    no
+  segment_133            24.3   0.3030   0.4848   0.1268    no
+  segment_134            22.1   0.3529   0.4706   0.1210    no
+  segment_135            23.7   0.3333   0.7778   0.1017    no
+  segment_136            20.9   0.3056   0.4444   0.0899    no
+  segment_137            23.3   0.5000   2.3000   0.3964    no
+  segment_138            22.4   0.4848   0.6061   0.2727    no
+  segment_139            20.5   0.2432   0.5676   0.0640    no
+  segment_140            22.2   0.3125   0.8438   0.1124    no
+  segment_141            24.9   0.2333   0.5333   0.0765    no
+  segment_142            20.5   0.2857   0.5429   0.1707    no
+  segment_143            22.3   0.5135   0.5135   0.1696    no
+  segment_144            24.1   0.2093   0.7907   0.0550    no
+  segment_145            20.4   0.4146   0.5610   0.1699    no
+  segment_146            23.9   0.2955   0.5682   0.0955    no
+  segment_147            21.4   0.2439   0.8293   0.0856    no
+  segment_148            24.3   0.4906   0.5472   0.1709    no
+  segment_149            18.5   0.5312   0.4375   0.2626    no
+  segment_150            24.1   0.3143   0.5143   0.1667    no
+  segment_151            25.0   0.5652   1.0000   0.1912    no
+  segment_152            21.9   0.4130   1.4565   0.1394    no
+  segment_153            24.7   0.3810   0.6667   0.1327    no
+  segment_154            24.0   0.5714   0.8571   0.2733    no
+  segment_155            23.2   0.3947   0.7105   0.1961    no
+  segment_156            22.6   0.2791   0.3023   0.0586    no
+  segment_157            23.2   0.3519   0.6852   0.1282    no
+  segment_158            22.4   0.4242   0.5758   0.2640    no
+  segment_159            20.9   0.5435   1.6304   0.2824    no
+  segment_160            23.3   0.4286   0.7429   0.1405    no
+  segment_162            23.3   0.0667   1.0667   0.0600   YES
+  segment_163            23.8   0.8333   0.7500   0.3925    no
+  segment_166            21.9   0.2059   0.8529   0.0737    no
+  segment_167            18.6   0.4750   0.6750   0.1638    no
+  segment_168            22.0   0.3590   1.9231   0.1688    no
+  segment_169            23.9   0.3704   0.7778   0.1397    no
+  segment_170            24.6   0.5417   0.7083   0.2560    no
+  segment_171            14.4   1.3333   1.0000   1.3077   YES
+  segment_172            18.5   0.2143   0.9286   0.0643    no
+  segment_173            20.8   0.2549   0.7059   0.0850    no
+  segment_174            23.3   0.4444   0.9111   0.1732    no
+  segment_175            22.8   0.2766   0.6809   0.0856    no
+  segment_176            20.3   0.3261   0.7174   0.1339    no
+  segment_177            22.1   0.4762   0.6667   0.1835    no
+  segment_178            20.7   0.3750   0.7917   0.1241    no
+  segment_179            24.4   0.2787   0.7869   0.1041    no
+  segment_180            12.1   0.6364   1.0000   0.2712    no
+  segment_181            24.7   0.4186   0.7442   0.1346    no
+  segment_182            23.0   0.3191   0.5532   0.0738    no
+  segment_183            18.8   0.3333   0.9444   0.0995    no
+  segment_184            21.1   0.2895   0.4474   0.1171    no
+  segment_185            24.2   0.3636   0.6667   0.0674    no
+  segment_186            21.6   0.3571   0.7857   0.1776    no
+  segment_187            23.2   0.3250   0.6000   0.0892    no
+  segment_188            24.9   0.2759   0.5517   0.0705    no
+  segment_189            22.3   0.3600   0.6800   0.1325    no
+  segment_190            19.8   0.2619   0.5476   0.0811    no
+  segment_191            16.5   0.3448   3.4138   0.1173    no
+  segment_192            23.3   0.2708   0.5000   0.0925    no
+  segment_193            20.3   0.2558   0.6279   0.1004    no
+  segment_194            21.3   0.3659   0.8537   0.1364    no
+  segment_195            23.3   0.4884   0.5814   0.1371    no
+  segment_196            21.4   0.3636   0.8788   0.2139    no
+  segment_197            24.0   0.4130   0.9783   0.1124    no
+  segment_198            18.7   0.4412   0.6471   0.2205    no
+  segment_199            22.3   0.2083   0.4583   0.0981    no
+  segment_200            24.7   0.4419   0.9767   0.1169    no
+  segment_201            24.9   0.3226   0.5000   0.1217    no
+  segment_202            19.4   1.0000   1.0000   0.9474   YES
+  segment_203            18.7   0.3913   0.3478   0.1268    no
+  segment_204            18.1   0.4242   0.5758   0.0990    no
+  segment_205            21.7   0.3333   0.8125   0.1164    no
+  segment_206            23.7   0.3000   0.9000   0.1065    no
+  segment_207            23.9   0.3200   0.3400   0.0870    no
+  segment_208            13.7   0.6154   0.7692   0.1549    no
+  segment_209            25.5   0.7500   0.9167   0.3846    no
+  segment_210            22.1   0.3889   0.4167   0.1042    no
+  segment_211            24.4   0.3962   0.8491   0.1341    no
+  segment_212            20.5   0.4186   0.7674   0.1595    no
+  segment_213            23.7   0.4286   0.5357   0.1495    no
+  segment_214            22.4   0.3889   0.9722   0.1122    no
+  segment_215            21.7   0.2381   0.8095   0.0817    no
+  segment_216            21.9   0.2222   0.3778   0.0746    no
+  segment_217            23.2   0.4082   0.4898   0.1481    no
+  segment_218            19.1   0.5357   0.6071   0.2062    no
+  segment_219            22.6   0.3250   0.7250   0.0877    no
+  segment_220            24.4   0.1935   0.7419   0.0596    no
+  segment_221            25.0   0.2500   0.3125   0.0902    no
+  segment_222            24.1   0.4359   0.6410   0.1944    no
+  segment_223            19.5   0.3448   0.6207   0.0909    no
+  segment_224            24.9   1.7593   0.6296   0.9741   YES
+
+  Full transcript (fine-tuned, unflagged segments):
+  --------------------------------------------------------------------
+  هدولاً، لو تفكر فيها، إنت عندك documents مصنفات، سهل تحسبهم؟ لو بدك
+  تعمل implementation للـ parameter estimation، فاضح إنه مش صعب، مش عندك
+  كلمات في كل document، فصير أعدّه قسم على عدد فقط. طب، يلا هاد حكينا
+  عنه. الـ implementation trick بس هنشو بحكيلك؟ بحكيلك عشان تبسطوا
+  الأمور على حالك ثاني الـ implementation، كل الـ documents اللي هم
+  class J حطهم في one document، في one mega document. يعني كم document
+  رح يصير عندك هسه هيك؟ بعدد class بس، بصير الـ implementation أسهل زي
+  ما رح نشوف. ليه؟ لأنك أنت بتصير تحسب الـ frequency لكل كلمة في
+  document واحد، في الـ mega document بس، يعني شو احتمالية كلمة مثلاً
+  old old given class J بتعد كم مرة إنه ذكرت كلمة old في كل الكلمات اللي
+  في هذا الـ document اللي هو mega document J. شو في عنا مشاكل؟ لسه
+  طبعاً المشاكل بتخلصش كثيراً، في عنا المشكلة التالية. المشكلة التالية،
+  مرت علينا سابقاً، كلمة fantastic، مثلاً نتخيل إنه عندك الـ problem
+  sentiment analysis، يعني أنا أعطيك document تقول لي هل الـ review
+  positive ولا negative، ونذكرت فيه كلمة fantastic، شو بـ شو بـ أعطيك
+  انطباع؟ الـ positive، طيب، طيب، لنفرض إنّها في الـ training dataset
+  ولا مرة صدفت إنّ كلمة fantastic ترتبط مع positive، يعني ما نذكرها كلمة
+  fantastic، وشفتها في الـ test dataset، هل أعطي هاي probability 0 أثناء
+  الـ inference؟ مش منطق صح؟ فأنا بدي أحلّي لي هاي المثل. ‫ليحلّي لي هاي
+  المشكلة. ‫ليحلّي لي هاي المشكلة. ‫إذاً بيكون اللي كاونها ما صفّتش ولا
+  مرة في الـ training data set ‫بقى ارتبطت الـ fantastic مع الـ
+  positive، معناته البصت 0، ‫وكل probability هاي 0. ‫هل منطق إنها تكون
+  الـ probability الـ fantastic given positive 0؟ ‫مش منطق. مش منطق، إذا
+  رجعنا لمشكلة الـ 0 probabilities اللي حكينا عنها المرة الماضي، cannot
+  be conditioned away no matter the other evidence. مقدرش يعني تجاهل الـ
+  0 probability. فكيف إذا بدأ أعمل؟ ممكن حل effective برضو يكون في عندي.
+  بكون في عندي smooth-ing، واخدنا المرّة الماضي لا بلاسيان smooth-ing،
+  شو لا بلاسيان smooth-ing؟ يعني أعرضها هون بطريقة جميلة، بتظاهر إني شفت
+  كل كلمة في كل class مرّة واحدة زيادة، فجمع واحد هون، واحد هون، يعني
+  بتظاهر إني شفت كلمة fantastic، fantastic مرة واحدة مع الـ positive
+  class. وبرضه مرة واحدة مع الـ negative إذا أصلاً إذا ما ذكرتش مع الـ
+  negative. بتقول لي مش منطق، بتقول لك خلاص إحنا بدناش دي أهم إشي أتخلص
+  من الـ zeros. الهو شويّة math شو عمل؟ وزّع الـ summation على الجهتين.
+  الجهتين، لما يوزع الـ tomash على الجهتين، هاي الـ 1 تحولت لـ V، واضح
+  ليش؟ لأنه هو بلفع كل الكلمات، بجمع ones، وإنّها صارت عنده V. فإذاً هاي
+  بعد ما تطبّك الـ add1 لـ place and smoothing، هيك بتصير المعادلة الـ
+  maximum likelihood estimate للـ likelihood factors. good factors.
+  مستحيلة probability عند أي كلمة في الـ vocabulary عند أي class تكون 0.
+  وحتكون قيمة قليلة إذا ما ذكرتش ولا مرة بس مش 0. أهم إشي أنا تخلصت من
+  الـ zeros. وهون بش بعطيك الـ pseudo code اللي بتستخدمه تستخدمه عشان
+  تعمل fitting لـ Model برامجها، بس هون، وهون. نستعرضهم سريعًا. هون عديل
+  لكم عدد Documents في Class J على عدد Documents الكامل عشان تحسب الـ
+  Prior. هون بيعطيك الخطوات. خطوات، امشي عكل الـ documents اللي هم class
+  J، ادمجهم كلهم مع بعض في mega document، إذاً صار عندك عدد من documents
+  بعدد classes، بعدين عند هذا الـ class J، امشي على كل كلمة، كلمة كلمة،
+  اعد كم مرّة ذكرت كل كلمة في class J، هاي هم، أيّهن، على شو؟ على إيش؟
+  على n، شو هي n؟ هادي؟ إذاً هاي عدد المرّات إن كلمة، إن ذكرت فيها كلمة
+  WK في class J، n هاي عدد الكلمات الكلّي في class J، طبعاً هدول شو؟
+  هدول شو؟ اللي هم Smoothink، لما تستخدم 1، Add 1 لـ Plasma & Smoothing،
+  بتكون الـ Alpha 1. هاد عندّي سؤال لحد هم. فيه هون نقطة مهمّ إنّي
+  نذكرها، نذكرها، اللي هي إلا تصدف إنه هاي مشكلة أخرى غير الكلمات اللي
+  بتكون، اللي بشوفها أنا، سواء في الـ train أو الـ test، والكلمات اللي
+  ممكن تيجي جديد في الـ test dataset، أو خلينا نعيدها بالصغر ثاني. بصيغة
+  ثانية. أنا ما بلشت أحلل الأمور وأبني كليسيفير شوف كنت شايف هدول
+  الكلمات عشرة آلاف كلمة، بس لما بلشت أستخدمها، صلت أشوف كلمات جديدة ما
+  عمريش شفتها، فهاي هي الـ unknown words. What about unknown words that
+  appear in our test dataset but not in our training or vocabulary
+  dataset؟ We ignore them بكلك أحد التكنيكس techniques ممكن انت تحمل.
+  حين درسنا اشي سابقاً غير هيك صح؟ مهملناهم اش. عطيناهم very small
+  probability. لكن بكلك إذا كانت الـ training dataset already
+  representative enough وكبيرة وطلّعبت منها تقريباً كل الكلمات ممكن تكون
+  مهمة، تكون مهمة، فعندنا في الغالب إذا فيه document في الـ test data
+  فيه، فيه كلمة واحدة فيه، مش موجودة ممكن ما تكونش مهمة ذالك
+  classification task، فاحملها. Remove them from the test document.
+  Pretend they were not there. Don't include any probability for them at
+  all. for them at all. يعني بكون لك ظهور الكلمة الـ unknown في الـ test
+  document عادةً ما بكون evidence قوي إنه يحكي لك لأي class تتبعه. ليش
+  بقالكم؟ مين بيحكي لي ليش؟ ‫تكيلي ليش؟ ‫كمان مرة، في الـ test dataset
+  أنا عندي كلمة شفتها أول مرة بشوفها، ‫بكلك إنك ‫إنك تستخدمها وتعطيها
+  probability بالعادة مش راح يفيدك في الـ classification، ‫لما تحديداً
+  متستخدمين إيه فقط؟ ‫احتمال صغير، أوكي. لأنه هو هذا الـ probability
+  إلها إذا حسبت، واتعاملت معها زي ما كنت تتعامل مع الـ zero
+  probabilities، بتعطيها 1 على عدد، مثلاً probability قليلة، رح تكون
+  موجودة في كل classes. كل classes، سواء c1 أو c2 أو c3، رح يلغوا بعض،
+  النفس القيمة رح يأخذوا عند كل classes، فمش راح يكون إلهم تأثير على
+  النتيجة النهائية. stop words، بجمعنا بكلك يعني فيه شغلات إنت ممكن برضه
+  تأخذها مع الإعتبار حسب الـ classification task اللي بينديك، مثلاً stop
+  words stop words هي كلمات بتتكرر كثير معنى لكل لغة فيها list في stop
+  words زي إيش stop words؟ stop words. the هي شي الاخرى. هذولا بعبروش
+  عبالعادة عن المعنى وبتكرروا كثير في كل document. يعني كلمة the تقريباً
+  بتتكرر في كل الـ document صح؟ فهل بالك رح تكون لها أثر في تحديد class؟
+  كيد لا، وممكن جهل. ‫ممكن ينجحل. ‫أخدتوا برضه كيف ممكن أنت تستعيض عن
+  predefined list of stop words؟ ‫الجميع أخذوا knowledge representation.
+  ‫كلكم أخدتوا knowledge representation صح؟ ‫أخدتوا TF, IDF. TF-IDF؟ مين
+  بيحكيلي كيف ممكن يساعدني TF-IDF؟ أو أنولي اللي ممكن يساعدني في أي
+  الجزئين هدول إني أستعيد عن stop words من خلاله؟ شو رايكم؟ تتذكروا؟
+  تتذكروا؟ اللي هي رتبت كم من التنمية بس الـ 3، لأن كانت كيف الـ
+  distribution دبع على الـ 1% و الـ 4%؟ بالضبط، هذا إنّا بتحكي عن إيش؟
+  عن الـ IDF. IDF. آه، إذاً الـ IDF مهم بالنسبة إلنا هون في هذا الصياق،
+  ليه؟ لأن شو الـ IDF بيحط وعطيك؟ أعطيك، أعطيك قيمة قليلة كثير إذا كانت
+  الكلمة موجودة في كل الـ documents تقريباً، إذا كانت، هو فعلياً راح
+  أعطيك 0 إذا كانت موجودة في كل الـ documents، فدائماً الـ IDF لدّة 0،
+  معناته أنا ممكن أستخدم هذا الـ metric، الـ term metric، عشان عشان
+  أستعين عن stop، يعني بدل ما تعطيني اللغة العربية stop words، أو اللغة
+  الـ Chinese stop words، تقول لي هدول stop words هون هنالك، ممكن أنا
+  أستخدم الـ IDF وأستغن عن هاي الشيء، طبعاً يعني هاي الشغلة. طبعاً هاد
+  راجعوه لأنه رح يلزمنا الـ TF-IDF اللي أخدتوه في الـ knowledge
+  representation، كيف رح يلزمنا؟ أنه another important method for
+  feature representation لكل document، صح ولا لا؟ صح ولا لا؟ مش إحنا قبل
+  شوي حكينا إنّه frequency of words كل document معبر عنّه مثلاً كم مرة
+  تكرّرت كل كلمة. بس الـ tfd-idf وهذا إشي قوي ويستخدم كثير في الـ NLP،
+  مش راح أنا أشرح لكم أخدته بس يعني خلّيوا في بالكم، هو أصلاً class في
+  الـ Python، إيه؟ اه، بس بدك تتعبّب زيادة شوي، نقرأ عن الـ TF-IDF،
+  تمام؟ ممكن أوفّر لك material أو video، وبعث لك إياه، بس سهل الـ
+  concept منّه، الـ TF، شو الـ TF كم مرّة ذكرت الكلمة في الـ document؟
+  كم مرّة ذكرت الكلمة في الـ document الواحد؟ الـ IDF، الـ IDF كديش
+  مهمّة الكلمة لأنها بتنذكر في عدد قليل من الـ documents. إذا بتضربهم في
+  بعض، بعطيك همّية للكلمة في document معين. فإذاً، افرض أنه في عندي أنا،
+  بس خليني إذاً لو هيك نرتب الأمور شويّة. ها شو في عندك إنت؟ بدك تجهّز،
+  الدوكيومنت اللي عندك بدك تجهّزهم كأرقام عشان تبعثهم للمشين لاردن
+  ألغوريثم. هون شو بكون في عندك؟ اللابل. هدك اللابل. C1 C2. هون شو بكون
+  في عندك؟ قبل شوي أول محاضرة أخذنا كاونت فيكتور، كاونت فيكتور يعني كم
+  مرة إذا كان عندك الكلمات مرتبات هيك، خلينا نفترض إنه A, the, the, is,
+  run إلى آخرين. كم عدد الكلمات؟ V مصبوط بعدد الكلمات المختلفة، إلهم هذا
+  الترتيب. الـ column الأول لمين بكون محجوز؟ للـ A. الثاني للـ the
+  وهكذا. ممكن يكون حجم الـ vocabulary 5000 أو أكثر طبعاً. أو أكثر طبعاً.
+  أول method وأبسط method عشان أحول الكلمات لأرقام الـ count vector. هون
+  ذكرت مرتين، هون مرة، هون عشرة إلى آخر. هاي أبسط method. اللي أعقد منها
+  حبة Tf, Idf. TF-IDF، وبستخدموه كثير by the way for feature
+  representation. TF-IDF، يعني شو معنى القيمة اللي هون؟ القيمة اللي هون
+  اللي هي طبعاً للـ Document D1. TF-IDF للكل لـ لـ كيف رتبههم بالعادة؟
+  مش مشكلة، للـ document D1 عند الكلمة إيش؟ a. ممكن تكون هاي قيمة زي
+  هيك، 2 point، ظاهر رح تكون 0، ليش رح تكون 0؟ لأنه الـ a لأنه الـ A
+  تنذكر في كل الـ Documents، فـ الـ IDF منها رح يكون 0، بس لو أخد الـ A
+  أخد كلمة run، Tf IDF لـ run في Document 1، ممكن تكون قيمة زي هيك، هلّا
+  هاي القيمة من وين جاية؟ من وين جاي؟ 2.5 جاي من عملية ضرب. الـ tf لكلمة
+  run طبعاً بعد ما تتحول لـ بعد ما يتاخذها الـ log، من عمل dampening
+  إلها، في معادلة. بس هي هاي بتمثّل الـ frequency يعني. الـ frequency
+  للكلمة، لكلمة run في الـ document D1. document D1 ممكن تكون 1.5، طبعاً
+  الـ frequency بتكون الشاكة، كسر، بس لما تأخذ الـ look الـ account
+  بتحول، الـ IDF الـ IDF بيكون عمستوى الـ corpus مش عمستوى الـ document،
+  الـ IDF لكل متران ممكن يكون كم؟ تكون كم؟ كلمة run هاي بتتكرر في كل الـ
+  documents؟ لا، ممكن تتكرر في عشرة، فممكن، فبالتالي ممكن تكون هاي
+  عاليش، 2. فلما تضرب هذولة في بعض، بطلع عندك الـ t of idf لكلمة run في
+  document d1، ممكن تكون 3 إذاً. فإذاً عند كل document document عند كل
+  document لكل كلمة أنا قدرت أحسب قيمة، هاي القيمة شو بتعكس؟ بتعكس
+  شغلتين، كديش الكلمة هاي متكررة في الـ document و كديش هي نادرة في كل
+  الـ course بشكل عام، لأنه نترتها مهمة بتعكس الـ topic بالعادة، بلاص.
+  class. هلّا هي في الـ Python مثلاً في عندك class واحد، تعطيه الـ
+  document، تعطيه كل شيء مع شوية parameters بيحسب لك كل هدول الـ vectors
+  عمستوى الـ codes. بس لازم يكون عارفين الـ semantics إلّا. فيك في الـ
+  tf, idf مهم في الـ nlb برضو، لازم نعرف معناه، وشو فكرة كل واحد منه؟
+  ايه؟ تفضل. ‫بالتفضل. ‫بالضبط، وقل حدوث هاي الكلمة في الـ Document
+  الثانية، ‫إذا تكررت كثير الكلمة في الـ Document، ‫وقل حدوثها وظهورها
+  في الـ Document الثانية، ‫برتفع كثير الـ TF هذه. يعني بكل أقارن مش
+  دائماً stop words إنك تشيلها وتتخلص منها مهم حسب الـ NLP task. In
+  practice, most naive-based algorithms use all words and do not use
+  stop word lists. board lists. sentiment and binary naive base. طيب
+  ناخد بس مقدمة و بعدين ناخد استراحة. إذاً نراجعكم شو هو الـ sentiment
+  analysis. analysis. هاي task مهمّة في الـ NLP. وعطيني انطباع الـ users
+  عادةً عن documents موجودة بالعادة، وإلّها special cases زي ما راح
+  نشوف. هلّا كيف دا استخدم الـ naive base في الـ sentiment analysis؟ كيف
+  ننطور عليه لتو؟ أقول لك هون أفترض إنّه في عندك في عندك كم في الـ
+  training dataset مجموعة من documents 1, 2, 3, 4, 5، 3 منهم negative.
+  الـ user هو يكتب كان عنده انطباع سيّة، في عندك 2 users أعطوا انطباع
+  جيّد، يعني positive positive. الـ shoot task إذا شو التاسك؟ إنك تبني
+  من هاي الـ training dataset لما تعطيه document جديد تحدد لك شو الـ
+  polarity إلو. دوّا جميع، ولهذا كله أخدناه. كله أخذناه، بس نفترضه بس،
+  كله أخذناه. برامتر estimation، بعدين inference عمل. هاي التريننج data
+  set، هون عشان يحسب الـ prior، احتمالية كل class. ليش 3 ع 5؟ 3 من 5، 2
+  ع 5، 2 من 5. Likelyhood، طبّق تطبّق relative frequency مع laplacean
+  smoothing. عند كل كلمة، شوف، إنت بدك تشوف، بدك طبعاً هو ما عملش
+  enumeration لكل الكلمات هون، بس بدك تشوف كل الكلمات المختلفة اللي هون،
+  شايفين؟ كل الكلمات المختلفة بدك تحسب احتمالية كل واحد فيهم عند كل
+  class. كل class. فهون أخذ هو بس ثلاثة، بس حسب لك عند predictable و no
+  و fun. حسب لك test case. آه بس ركز على الكلمات اللي في الـ test case،
+  تمام، ما أخذش كل الـ parameters، بس هو إذا بدك إنت تحسب الـ
+  parameters، بدك تحسبها على كل الكلمات، بس هون فعلاً هو أخذ الكلمات
+  اللي موجودة الموجودة في التست، أهمل مثلاً الـ wealth. فإذا من كل هدولة
+  شاف احتمالات الـ predictable given minus، كيف حسبها هاي؟ منين جات الـ
+  14 مثلاً؟ negative. نيقاتيف، خلينا نعدّهم 1، 2، 3، 4، 5، 6، 7، 8، 9،
+  10، 11، 12، 13، 14، فيّعني؟ طيب منين جات الـ 20؟ عندّي الكلمات
+  المختلفة في الـ Training Dataset، هاي الـ 1 عرفنا منين جات، شو يعني 1
+  هاي؟ يعني هاي انذكرت مرّة واحدة مرة واحدة، مرة واحدة في الـ negative.
+  وهكذا. يعني إذا بدك تتأكد إنه شغلك صح، لازم هدول كل الـ probabilities
+  هدول عند class negative لكل الكلمات طبعاً يكونوا sums up to 1. 16 16
+  17 18 19 20 21 بس هاي تكررت تكرر، آه 19 20 آه، هاي بعد هاش. آه، نقرأ
+  بس هنعم. هني؟ نعم. أنه، هلأ شو عمل هون بالآخر؟ هون بلّش يستخدم الـ
+  inference، لأنه جهّز الـ model parameters. كيف طلعت هاي؟ هو ضربهم ضرب
+  الـ probabilities أعتقد، ما أخدش الـ log لأنه عددهم قليل، عدد الكلمات
+  قليل. قليل، فبالتالي طلع عنده two probabilities، هذا الـ inference،
+  تذكروا له الـ probability للـ class و الـ probability للـ document
+  given للـ class، الـ argmax، نشوف أنه الـ class اللي باعطى أعلى
+  probability من الـ two classes هدول، و classes هدول. الـ negative ليش؟
+  هون 2 في 2 في 1. أيها 2 في 2 في 1. ولو قام مجموعة هدول الـ 2 مع بعض
+  طبعاً ضربهم في بعض 3 مرات لأنه عنده 3 كلمات. 3 كلمات. أني بتطلع على
+  positive. فإذاً الجواب إنه الـ class positive. طب، حد عندي سؤال لحد
+  هون؟ آه حكسناهم إحنا؟ آه سري هاي 6 هاي 3. 6 هاي 3. نسلل الصيام شكله.
+  إذاً هاي أعلى. الجواب مينز. طب ما نأتي نوخذ إصطلاحي جماعة. 10 دبائق
+  ونكمل. تمام يا جماعة. نعود. Okay. Optimizing for sentiment analysis
+  إذاً يعني تطبيق الـ simple approach اللي شفناه قبل شوي ممكن ما تفيدنا
+  كثير في الـ sentiment analysis لأنه إلها اعتبارات معينة. معينة، خلّنا
+  نستعرض بعضها. إذن for tasks like sentiment, word occurrence seems to
+  be more important than word frequency. يعني ظهور كلمة مهم أكثر منه كم
+  مرة تكررت، once لها ظهرت كلمة fantastic مثلاً، حتى لو انذكرت مرتين أو
+  ثلاث، خلّص، المهم منها ظهرت في الـ document ممكن تعطينا انطباع.
+  الانطباع. The fact that it occurs five times may not tell us much
+  more. إذن هيك بلّش يروح ويحكوا عن الـ binary multinomial naive base or
+  binary NP. Clip our word counts at one. يعني بشوف كل document. إذن
+  ذكرت فيه الكلمة خمس مرات 5 مرات بشوفها زي كنا نذكرها مرة واحدة فقط،
+  هاد هو الـ binary multinomial naive base. يعني كيف بتغير الـ algorithm
+  اللي شفناه قبل شوي عشان أحسب الـ model parameter؟ بضيف هاي بس. remove
+  duplicates in each document for each word type W in document J.
+  document جه. يعني إنت مش دمجنا كل الـ documents إلو بنفس الـ class الـ
+  mega document واحد. لا، قبل ما أدمج طريقة. إذاً كل document بشوف
+  الكلمات المتكررة فيها تكررت أكثر من مرة، بخليها مرة واحدة فقط، بعدين
+  بكمّل الـ process زي ما هي. ‫سيماهي. ‫هنا ما عطيني مثال، وورجيني شو
+  يعني؟ ‫هاذ شايف يعني two documents negative و two documents positive.
+  ‫وهاي الـ counts هيك كانت. ‫ـ And مرتين في الـ positive، zero في الـ
+  negative، إلى آخر. ‫هذا بدون الـ clipping. only clipping. After
+  pre-document binarization، تلف الوضع عندي هون شوي. صارت الـ counts
+  مختلفة. لاحظوا هون كانت 3، هون شو صارت؟ 2. وهكذا. وهكذا إذاً counts
+  can still be 2, binarization is within document. هون على مستوى الـ
+  document البناني. يعني في الـ document الواحد بدأ ما تنذكر مرتين بخليه
+  بشوف إذا كانها مرة واحدة. بس شو يعني الـ 2 هذي بده يحكي لك؟ ليش counts
+  can still be 2؟ أكثر من document فيهم، أكثر من document في هذا الـ
+  class فيهم كلمة great. great. فعلاً هون احنا هون الـ positive. وهي هم
+  على البرت. مرتين. مرتين. إذاً اللي بدي أكتلك هي إنه الـ binary
+  multinomial naive-based وجدوا إنه بعطوا نتائج في الـ sentiment
+  analysis أفضل بعد ما عملنا هذا الـ trick صغير، لكن الـ sentiment
+  analysis و الـ sentiment classification برضه في كثير الـ tweaks you
+  can conduct conduct بتعطيك نتائج أفضل، مثلاً dealing with negation،
+  هلأ والله مثلاً في كلمة like في الـ review، وأنا حطّلت قبلها didn't
+  باش ينعكس كل الـ polarity، انعكست، لأن ظهور كلمة like مش لازم بس لحاله
+  أعتمد عليه، لازم أشوف الـ negation، والـ negation إلّه impact كبير
+  بالعادة، كبير بالعادة. I really like this movie. I really do not like
+  this movie. Negation changes the meaning of like to negative. كيف دي
+  اهندلو هلأ؟ Negation can also change negative to positive وبالعكس
+  صحيح. عكس صحيح. إذاً إيشوا في هذا البحث مثلاً شو عملوه dealing with
+  negation كيف يتعامل مع الـ negation في الـ task تبع الـ sentiment
+  analysis؟ راح أضافه الـ not underscore to every word between negation
+  and the following punctuation. punctuation. يعني عملي إشي زي هيك. شاف
+  هون الـ negation؟ هاي الكلّمة هاي الجملة الأصلية. وهون أول
+  punctuation. راحوا لما شافوا الـ negation ضافوا not هون. not لهاي
+  ولهاي ولهاي. ولـ movie برضه. movie برضه. إذاً شو حملهم الفعاليات؟ زي
+  كأنه غيروا الكلمات. المنطق فاضي ولا شو رايكم؟ يعني بمعنى آخر ضاف كلمات
+  جديدة على الـ negative class. class، ورح تأخذ counts one، ومش موجودة
+  هاي الكلمات وين؟ في الـ positive class. وبالتالي لو صدفة إجي عندك في
+  الـ test dataset negation مع كلمة like، بكون متدرّب بالضبط، وحتّي لما
+  ذكر عدة كلمات بعدها، مما يشوف الـ not، نشوف الـ not بيعتبرها من الـ
+  class الـ negative. فهذا الـ trick بسيط، لأنه ليه عادةً في الـ reviews
+  لـ domain معين مثلاً في e-commerce system، بتكون الكلمات اللي في الـ
+  domain هادة محدودة. Like the movie. The movie is fantastic. Did not
+  like the movie. يعني شغلات زي هيك، فإذا كان عندك انت عدد كبير من الـ
+  reviews، الـ reviews إلا الـ cases هاي تتكرّل كثير. شو من الشيء برضه
+  المهم ممكن تعملها؟ اللي هي الـ sentiment classification في استخدام الـ
+  lexicon. بنا من الـ lexicon. شو الـ lexicons؟ ذكرناها قبل هيك. اللي هي
+  الـ dictionaries. يعني إنت بكون في عندك قائمة من المصطلحات أو الـ
+  adjectives اللي عادة أنت تستخدم في الـ positive scenarios و adjectives
+  بتستخدم في الـ negative scenarios. بتكون موجودة عندك مسبقاً بـ
+  rebuild. بـ rebuild، يعني بتجيبها من القاموس أو بتجيبها somewhere،
+  وهدول كلهم مع بعض في الـ dictionary شو بسمّوا لكسيكون. وفيه different
+  publicly available lexicons موجودة لـ sentiment analysis. كيف بيفيدني؟
+  كيف يفيدني؟ أنا والله بشوف يعني أنا إذا الكلمات، الكلمات اللي في الـ
+  document هاد موجودة في الـ positive lexicon، يعني من ضمن الكلمات اللي
+  معروفة مسبقاً لأنها positive، هاد هاد indicator قوي ممكن يساعدني إنّي
+  أعتبر الـ document positive مثلاً. هو أنا بستعرضلي في هاي الأبحاث ‫بس
+  هاي الأبحاث مجموعة من المساهمات البحثية السابقة اللي جمّعوا فيها
+  مجموعة من الكلمات الـ positive والـ negatives في لغات معينة، ‫هون
+  مثلاً في اللغة الإنجليزية، هون مثلاً بعض الكلمات الـ positive،
+  negatives، الـ negative. ‫بس السؤال اللي بطرح نفسه، هون برضو هضو بحث
+  آخر، آخر. يعني إذا بتروح على الـ links بتتفرج عليه ممكن تنزلوهم
+  تستخدموهم. بس السؤال اللي بطرح نفسه هلّا كيف بدّي أستخدم هدول الـ
+  dictionaries أو الـ lexicons في machine learning process زي الـ naive
+  base. إحنا اتفقنا الـ naive base قبل شوي قليل شوي، شو هم الـ features
+  فعليّاً اللي بستخدمهم؟ الـ كلمات، تكرار الـ كلمات، الـ probability لكل
+  كلمة given لـ class. بس هون عندي صار factor آخر بدي أخد في هالـ
+  اعتبار، اللي هو الـ كلمات الـ positive والـ كلمات الـ negative. يبدأ
+  أدمج الشرقتين مع بعض. إذاً ممكن أنا أستخدم الليكسيكونs to add new
+  features تدخل في الـ learning process إذاً add a feature that gets
+  account whenever a word from the لـ لـ لكسيكون occurs occurs. إذاً a
+  feature called this, ولان شايف هاي اخترع feature جديد. This word
+  occurs in the positive lexicon. مش في عندك إنت هون training data set
+  هون الـ label. إذاً بتروح تضيف feature جديد إنت هون هاي. شو تسميها؟
+  هاد الاسم. وfeature أخرى هون column جديد. ‫بقولهم جديد، شو تسميه؟ ‫بقى
+  يسمي هذا، ووقتها بتصير تشوف، ‫بالـ document هذا اللي أنا حالياً بدرسه،
+  ‫فيه كم كلمة ذكرت في ضمن المصطلحات الموجبة؟ ‫عشرة مثلاً، ‫فيه كم كلمة
+  انذكرت ضمن المصطلحات السالبة؟ ‫مثلاً واحد، بصير في عندي features جديدة
+  بالإضافة للـ other word features. إذاً في عندي صار two type of
+  features، هاي هاي نقطة مهمّة، وبتميّز برضه استخدام الـ naive base. الـ
+  naive base you can add any type of features to the existing word
+  features in the learning process. learning process. إذن هذولا كلهم
+  word features جايات من V. إذن using one, two feature isn't as good as
+  using all the words. طبعاً هو أنا بحكي لك يعني أنت ممكن أبسط إيش تعمل
+  وشو تروح تسوي؟ تحط لك two features اللي هو هاد وهات. وهو هادو هادو،
+  والـ label. طبعاً بما أنه عندك 2 features، إنت ممكن بمعادلة تحطهم،
+  بدكش machine learning process. بس بقول لك يعني it's not a fig... يعني
+  مش دائماً لما يكون في عندك لماة كثير موجودات من الـ positive lexicon،
+  هادا بدل إنه document positive، وقبل شوية ذكرنا شغلة الـ negation.
+  وبالتالي still you need all the words in the documents. إذاً شفنا
+  بالأخير كيف إنك نضيف إحنا features من lexicons بانين هم مسبقان فيهم
+  كلمات positive و negative، وندخلهم في الـ learning process. process.
+  الى هون learning sentiment lexicons. برضو هاي من الشغلات اللي نعمل
+  عليها ابحاث كثير. انه والله انا هاي ال lexicons مش اروح احطها manually
+  عند كل مثلاً والله domain معين. لا، اخلي الكلامات فيه. فمن الـ
+  algorithms اللي انشهرت في هذا المجال اللي هو الـ ternary algorithm
+  بيمشي في ثلاث خطوات. إذاً شو الفكرة هلّا؟ إحنا عرفنا كيف نستخدم الـ
+  lexicons عشان نبني features، ننسيها هاي هلّا. هلّا كيف بدّا بني الـ
+  lexicons؟ إنها الـ automatic approach، ونستخدمها في ‫مخدمها في الـ
+  learning process. Extract a phrase or lexicon from reviews. ‫أول إشي
+  بطلّع phrase من الـ reviews، phrases من الـ reviews، ‫بعدين بحسب الـ
+  polarity لكل phrase، ‫كديش هو ممكن يكون موجب، ‫كديش هو ممكن يكون
+  negative كل phrase. ‫بعدين rate a review by the average polarity of
+  its phrases. phrases، بعدين الـ review الكامل أو الـ document كامل
+  بأخذ الـ average لكل phrases اللي فيه as إيش؟ a polarity بي له، راح
+  نشوف من خلال مثال، إذاً أول، أول خطوة، أول step شو هي كانت؟ امسك الـ
+  document أو الـ review، اعمل extraction لـ phrases منه، كيف عملت الـ
+  extraction كانت؟ كانت؟ كانت تتم من خلال ... شوي صغير بس هنحل مشكلة.
+  presentation. And then كيف أول step بتعمل extraction لـ polarity of
+  phrases؟ phrases بيقول لك يمشي على نمط معين أو مجموعة أنماط، كل ما
+  تشوف adjective بعده بيجي noun، بغض النظر شو يجي بعدهم، الكلمة الثالثة
+  وما بعدهم، هاي بتأخذها as a phrase، بتعملها extraction من الـ
+  document. من الـ document. إذا إجي عندك مثلاً adverb بعدين adjective،
+  ورضو بتأخذهم هدول الكلمتين، أو بشرط إنه ما يكونش الكلمة الثالثة noun
+  معينة. ليه؟ لأنه درسوا linguistically درسوا إنه فعلاً هدول إذا بتطبق
+  عليهم هدال القواعد، إنت رح تطلع phrases وهي الـ phrases بكون الـ
+  polarity معينة، هي الـ positive أو negative. negative أو negative. طب
+  بتقول لي منين طلعوا هاي إن الكلمة adjective ولا noun ولا adverb ولا
+  verb؟ في عنا task في الأنالبي شو اسمها؟ part of speech tagging، هاي
+  التاسق أعطيها جملة بتقول لك كل كلمة شو ناعها؟ طبعاً رح نيجيها إحنا.
+  ‫بس يعني إذاً، نلاحظ هون كيف ترابط الـ tasks مع بعض، ‫كيف ممكن الـ
+  tasks تلزمك في task ثاني. ‫إلا هاي task الـ sentiment analysis زمني
+  فيها الـ part of speech tagger. ‫فإذا انطبق، وإنت ماشي على الكلمات
+  اللي في الـ review معينة، ‫في الـ document معينة، إذا انطبق إحدى هاي
+  الأنماط، ‫استخرج الـ phrase، وخده as possible candidate. candidate.
+  هلأ بعدين شو بتيجي بتعمل؟ بتيجي how to measure the polarity of each
+  phrase. بدك تحسب الـ polarity، يعني كديش الـ score اللي بدي أخذها كل
+  phrase. بنانا عايش، بنانا عـ الـ intuition التالي، الـ equation
+  التالي. إذا الـ phrases اتكرّرت وانذكرّت كثير قريب من excellent مع
+  كلمة excellent، أنا أتوهض الـ phrase بالعادة ممكن يكون positive الـ
+  polarity إلو positive. إذا انذكر الـ phrase اللي عملتله extraction قبل
+  شوي مع كلمة poor، ممكن يكون إيش؟ negative. المعادلة. بالـ random
+  variable X و Y. يعني بتحسب كديش هم عادةً بنذكره هذول الـ two random
+  variables correlated a lot with each other، بنذكره كثير مع بعض. القيم
+  الكبيرة فيهم تنذكر مع القيم الكبيرة، والقيم الصغيرة بتنذكر مع القيم
+  الكبيرة، يعني correlated. correlated بالنسبة لكونهم not correlated أو
+  ما فيش أي ارتباطة وعلاقة بمعنى؟ معنى لو بده بسط لك إياها هالـ الـ
+  mutual information، اتخيل إنه هدول الـ two random variables وإنهم مش
+  علاقة ببعض، معناته هاي independent، معناته هاي كيف ممكن تنكتق؟ P في P
+  مزبوط؟ Y مزبوط؟ معناته الـ bus بيروح مع المقام، معناته log الـ 1، log
+  الـ 1 كم؟ 0، فإذاً إذا كانوا independent الـ random variables، اللي هم
+  يعني بندكروش مع بعض، بيجوش مع بعض، ‫مع بعض، معناته الـ mutual
+  information بيناته هم 0، ‫وبتعلى كل ما كانوا إيش؟ depends on each
+  other a lot. ‫طب ها إذاً عند point معينة، point-wise mutual
+  information ‫عند point معينة بتأخذ هذا المقدار، مش عند كل الـ points.
+  كل الـ points. هاي بتحسب لك عند كل الـ points اللي ممكن يحملها الـ two
+  random variables. بس عند point معينة هذول الـ two random variables how
+  correlated with each other؟ إذاً how much more do events X and Y occur
+  than if they were independent؟ كل ما كانوا غير مرتبطات في بعض، كل ما
+  كانت القيمة 0، كل ما كانوا مرتبطات في بعض، مرتبطات ببعض، كل ما كانت
+  الكلمة أكبر من 0. الهذا بلّاش يحكيلي عن الـ Point-wise mutual
+  information في سياق الكلمات. كديش هدول الكلمتين مرتبطات في بعض؟ مش
+  إحنا قبل شوية شو كنا نحكي؟ كنا نحكي كديش الكلمة أو الفريز اللي إنت
+  استخرجته مرتبط مع كلمة مين؟ كلمة مين؟ excellent. الفريز اللي طلعتك
+  قديش مرتبط مع كلمة excellent. إذا كان رجعت لـ 0، ما نتمنى تكرروا إيش
+  مع بعض نهائياً هدول. طيب، إذاً كيف يمكن حسابها زي ما حكينا؟ log
+  بالأساسة وللـ probability للـ joint الـ joint distribution بين آتم على
+  الـ probability للأول ضل الـ probability للثاني. خلّل نستخدم هاي
+  المعادلة هلّا. Equally search engine في عندك الكلمات التالية,
+  probability للـ word والـ probability للـ
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lecture : CV_20260316
+  Segments total  : 79
+  Flagged         : 7
+  Duration        : 1644.5 s
+  Segs w/ ref     : 79
+
+  Model                      WER (raw)   WER (norm)  CER (raw)
+  ───────────────────────── ────────── ──────────── ──────────
+  Baseline (large-v3)           0.8567       0.7225     0.5310
+  Fine-tuned                    0.5418       0.4083     0.2604
+  Improvement                  +0.3149      +0.3142    +0.2705
+
+  Auto-flagged segments:
+    segment_745: ['high_cer (cer=0.62)']
+    segment_756: ['repetition_loop (ratio=0.90)', 'high_cer (cer=0.82)']
+    segment_759: ['repetition_loop (ratio=0.86)', 'too_dense (wps=7.22)', 'high_cer (cer=1.72)']
+    segment_763: ['repetition_loop (ratio=0.64)', 'high_cer (cer=0.68)']
+    segment_787: ['repetition_loop (ratio=0.98)', 'high_cer (cer=2.99)']
+    segment_789: ['high_cer (cer=0.87)']
+    segment_804: ['too_sparse (wps=0.29)', 'high_cer (cer=0.90)']
+
+  Segment details:
+  ID                   Dur(s)   WER-FT   WER-BL   CER-FT  Flag
+  ──────────────────── ────── ──────── ──────── ──────── ─────
+  segment_732            23.6   0.3077   0.9615   0.1154    no
+  segment_733            23.6   0.4722   0.6528   0.2252    no
+  segment_734            20.4   0.3409   1.2727   0.1036    no
+  segment_735            15.1   0.2609   0.7391   0.1401    no
+  segment_736            25.0   0.4030   0.5672   0.1260    no
+  segment_737            18.3   0.4737   0.6316   0.3380    no
+  segment_738            22.0   0.6400   0.7800   0.2174    no
+  segment_739            24.5   0.4464   0.8036   0.1883    no
+  segment_740            23.5   0.5625   1.2708   0.2129    no
+  segment_741            23.2   0.2500   0.6875   0.1045    no
+  segment_742            25.5   0.3433   0.5224   0.1563    no
+  segment_743            23.4   0.4203   1.0000   0.1346    no
+  segment_744            20.3   0.3962   0.6792   0.1172    no
+  segment_745            20.6   0.8333   1.0000   0.6212   YES
+  segment_746            19.9   0.2812   0.4375   0.0707    no
+  segment_747            18.2   0.5455   0.6818   0.1411    no
+  segment_748            15.3   0.7037   0.7778   0.4065    no
+  segment_749            12.9   0.4400   0.6400   0.2411    no
+  segment_750            26.4   0.4474   0.6447   0.1553    no
+  segment_751            22.3   0.6087   3.2029   0.1791    no
+  segment_752            11.8   0.4615   0.5769   0.1805    no
+  segment_753            19.8   0.3023   0.8837   0.1290    no
+  segment_754            24.8   0.3433   0.7761   0.0899    no
+  segment_755            25.0   0.3438   0.7031   0.0929    no
+  segment_756            29.3   1.3699   0.7260   0.8204   YES
+  segment_757            22.9   0.5111   0.5111   0.1328    no
+  segment_758            27.8   0.3026   0.5395   0.1206    no
+  segment_759            15.1   2.6667   2.6667   1.7184   YES
+  segment_760            25.0   0.3548   1.0000   0.1199    no
+  segment_761            25.0   0.3871   0.5484   0.1231    no
+  segment_762            14.2   0.3750   0.7188   0.1043    no
+  segment_763            25.2   1.1194   1.3582   0.6817   YES
+  segment_764            22.9   0.4194   0.5323   0.1677    no
+  segment_765            22.1   0.2203   0.6102   0.1051    no
+  segment_766            23.8   0.4375   0.5833   0.1596    no
+  segment_767            18.7   0.4310   0.6379   0.2298    no
+  segment_768            13.8   0.6667   0.6905   0.3942    no
+  segment_769            15.9   0.4889   0.7778   0.2463    no
+  segment_770            22.7   0.5246   0.6393   0.2897    no
+  segment_771            25.0   0.5190   0.7595   0.2159    no
+  segment_772            18.0   0.5806   0.8387   0.2921    no
+  segment_773            29.6   0.4773   0.5682   0.1634    no
+  segment_774            10.7   0.6667   0.7000   0.2083    no
+  segment_775            19.9   0.3333   1.5490   0.1149    no
+  segment_776            19.9   0.5946   0.8108   0.2372    no
+  segment_777            23.9   0.4032   0.8548   0.1215    no
+  segment_778            18.4   0.4750   0.7000   0.1881    no
+  segment_779            20.2   0.3800   0.6800   0.1863    no
+  segment_780            23.7   0.3559   0.8475   0.0951    no
+  segment_781            18.5   0.1579   0.3158   0.0537    no
+  segment_782            19.8   0.3137   0.8824   0.0947    no
+  segment_783            16.5   0.3902   0.6341   0.1750    no
+  segment_784            25.0   0.4762   0.8730   0.1724    no
+  segment_785            16.6   0.4722   6.1944   0.1176    no
+  segment_786            24.7   0.5263   0.9825   0.1758    no
+  segment_787            18.0   4.1481   0.6667   2.9926   YES
+  segment_788            24.5   0.5333   0.5778   0.2000    no
+  segment_789            15.2   1.0000   1.0000   0.8692   YES
+  segment_790            23.9   0.4444   0.8056   0.1078    no
+  segment_791            19.6   0.4655   0.5000   0.1101    no
+  segment_792            15.7   0.4419   0.8837   0.1814    no
+  segment_793            20.7   0.2969   0.3281   0.1350    no
+  segment_794            18.2   0.2340   0.2766   0.0948    no
+  segment_795            24.9   0.3200   0.5733   0.1205    no
+  segment_796            20.7   0.5556   0.8667   0.2076    no
+  segment_797            22.6   0.3871   0.8226   0.1290    no
+  segment_798            21.2   0.2899   0.6087   0.0986    no
+  segment_799            19.2   0.4359   0.5385   0.1716    no
+  segment_800            23.3   0.5926   0.5926   0.3946    no
+  segment_801            23.1   0.5349   0.7674   0.2462    no
+  segment_802            23.2   0.3684   0.5263   0.1250    no
+  segment_803            20.1   0.3182   1.3864   0.0741    no
+  segment_804            13.8   1.0000   1.0000   0.8966   YES
+  segment_805            18.1   0.3934   0.4754   0.1975    no
+  segment_806            14.2   0.5357   0.5714   0.1959    no
+  segment_807            24.0   0.4571   0.5000   0.1903    no
+  segment_808            10.7   0.2121   0.9091   0.0736    no
+  segment_809            25.0   0.4355   0.4355   0.1198    no
+  segment_810            24.7   0.3770   0.4426   0.1293    no
+
+  Full transcript (fine-tuned, unflagged segments):
+  --------------------------------------------------------------------
+  T0 و T1. طيّب، تحكيلي شو يعني؟ بحكيلك نفس الشيء، إذا إنت، هاي عطو، إذا
+  إنت أقل، إذا إنت أعلى من T0 يا عمّي، إذا إنت أعلى من T0 معنّة إنت برّا
+  الـ Edge، إذا أقل من T0 إنت جوّ الـ Edge، كـ Edge أنا بحكي، إنّك داخل
+  الـ Edge or not، طيّب جميل، معناته انت شطبت كل شيء واذا كان الـ
+  3-Shield عالي عالي فبالتالي رح تكون انت ما عندكيش قدرة انك تمسك الـ
+  Edges رح ترجع الـ Image almost زي ما هي. بالتالي this could be a
+  problem. الـ 3-Shield اللي اخدناه الطريقة الاولى الـ الـ هابلة انك انت
+  حكيت له هل انت اعلى من الـ 3-Shield؟ هاو قال انت اقل من الـ 3-Shield.
+  طب شو الحل؟ في حل سمارت افضل انك تاخد 2 3-Shields T0 على الجاوس. نرجع
+  لمشكلة الـ الـ first derivative. المشكلة الـ first derivative of
+  thresholding. إذا إنت زلت الـ thresholding بتشطب، وإذا إنت قللت الـ
+  thresholding بتخلي، بتطلع عندك fake, fake points أو edges. فبالتالي if
+  you increase, if الـ threshold كان صغير جداً الـ threshold، معناته شو
+  سوينا يا جماعة الخير؟ أخدنا الـ Laplace للـ Gauss وبالتالي رح تكون
+  النتيجة anyways أفضل يعني. فهون مجرد 0 crossing، هاي 0 crossing، هاي
+  الـ points اللي طلعت عندي أكيد الجز، ليش؟ لنتوعز on 0 crossing على الـ
+  Laplace، على الـ Gauss. مطارح الـ Edge. ما أفرقش كتير، اللهم إحنا
+  عملنا Gauss، وبعدين أخدنا Laplace، يعني ما استغلناش على الـ Image
+  فوراً F of X، لا، أخدنا Gaussian of الـ Image، وبعدين إعملنا Laplace،
+  وهذا الحكي اللي هيقدي إلى Better results أفضل بكتير، هذا just مثال
+  عليها كيف جبنا الـ Image، أخدنا Soaple Gradients عليها، إعملنا الـ
+  Smoothing في زلمتنا Gauss، بعدين شو سوينا يا جماعة الخير؟ الامكان.
+  وبساعدك الان انه تحصل على بتا رزلتس. هلأ طبعاً بالساكند ديريفاتيف انت
+  بتحكي على زيرو كروسينج لللوج. اللي هو هاي الـ points اللي موجودة هون
+  هاي. وين في عندي زيرو كروسينج؟ هدول مطارح الـ edge. image هال absolute
+  value للablas وهال positive values فقط لا غير لانه انت بطلع عندك
+  negative شو بدك فيه فبالتالي بتقول لي مش perfect maybe الافضل انك تيجي
+  على عمنا gaussian gaussian بيعمل smoothing للimage تمام على شكل
+  Mexican hat بضيع لك النويز قدر الامكان باخد Gauss للإيميج أول شيء،
+  وبعدين بعد ما أعمل Gauss باخد الـ Laplace، أوكي؟ فمشكلتنا إن إذا
+  استخدمنا الـ Laplace، هاي الـ Laplace الإيميج، مشكلتي فيها لما أحط لها
+  أنا أو أحسب الـ Absolute Value والـ Eva، رح يكون عندي noise في مشكلة
+  كبيرة، فعندك الصورة هاي هي الـ Original Image، هاي الـ Laplace Image،
+  تطلع عليهم. يعني ما بتطلع على التمانية الـ neighbors اللي موجودين
+  عندك. تمام؟ So both can help. بس مشكلة الـ Laplace بحد ذاته، شو مقساتي
+  مع الـ Laplace؟ إنه حساس للـ للـ noise، يعني حساس كتير للـ noise، فإنت
+  مش ضطر تحلي المشكلة بطريقة إيش؟ عمّه غاوس، ما بتقول أنا باخد غاوس الـ
+  results. هذا الـ image كيف عملها smoothing؟ بقولك يعني هاي نتيجتها
+  أفضل من إني أعمل smoothing للـ image قبل ما أعملها الـ edge detection،
+  فبالتالي النتيجة رح تكون أفضل. الـ Laplace حكينا فيه نسخة، نسختين منه
+  الـ 4 والـ 8، يا إما الـ 4 neighbors فقط بتتطلع عليهم، هيك شكلها.
+  وبالتالي الحواف وفي عندك حوالي هيك نتوآت، ويعني قصص كبيرة، فإنت كل ما
+  كان فيه تفاصيل أكثر، كل ما كانت الإميج معمولة لزوم أكثر، كل ما إنت
+  شايف تفاصيل، فبالتالي مشكلة، فبالتالي إنت كل ما كانت أبعد أخدت هيك من
+  بعيد، يعني قللت السيجما، السيجما تبعتك أصغر، كل ما قللت السيجما، كل ما
+  كان فيه مجال تعمل على beta results. طيب often problems arise in edge
+  detection that are there are too much details. لما كوني much details
+  زيّرّة جدّاً جدّاً، هذا بجنّني مشان أعمل edge detection لأنّ التفاصيل
+  اللي كتير ما بطلّت أعرف إني منها noise، وأني منها مش noise، إني منها
+  الـ edge، إني منها الـ edge يعني بتكون عندك الـ break نفسها لما إنت كل
+  ما كان عندك تفاصيل أكثر مع أنت بتكون فعليّاً هيك شكلها. هاي أمثلة كيف
+  بيمسك الـ horizontal كيف بيمسك الـ هذا الـ horizontal، هذا الـ
+  vertical، هذا الـ combination تبعهم إجمع هاي مع هاي، بطلع نتيجة هيك
+  طبعاً في عنا إحنا قد تكون تفاصيل ومشاكل بسبب إيش؟ too much smooth هاي
+  الـ area we need ... it could be like noise anyways، okay؟ different
+  operators أو different kernels يعني بالأحرى. تمام؟ We can apply them.
+  حلو إنكم تجربوهم. موجود الـ libraries فيها كل الـ functions. So I
+  think we can do it. تجربوه يعني. يعني log. طيب هاي الأمثلة بس رجع هو
+  يحكي على الـ first derivative الآن، هادي للـ diagonal هاد، هادي للـ
+  diagonal هاد، هاد للـ أفقي، هاد للـ عمودي، هاد للـ أفقي، هاد للـ
+  عمودي، هاد مزلمتنا private، هاد a sobel، في عنا cany، في عنا Roberts،
+  في عنا different، للإيميج بخلص من قصة النويز بخفف منه مأساة بعدها خد
+  المشتقة لهاي الإيميج اللي عملت لها جاوسيان فشو صار اسمه هادا؟
+  لابلاسيان أوف جاوسيان لوج قبل ما تبدأ. فكيف نعمل سموثنج؟ بتحكي بعمل
+  غاوس يعني، حلو، بعدين باخد الـ log، آهآ، باخد الـ place، شو بتعمل؟
+  بتقول بعمل غاوس للـ image. فإنك لما تضع لblurring أكثر للإميج أو أنت
+  تجيب gauss وترمي noise gauss gaussian noise فشو اللي بصير معاك؟ إنه
+  طلع كيف من 0 طبعاً هي ممتازة ما في noise بتكبرها لـ 0.1 بعدها لـ 1
+  بعدها لـ 10 and so on فكل ما كبر كل ما كان الـ noise عندك كل ما كان
+  عندك derivative مأساوية صعب جداً إنك تمسك الـ edges من هون مضطر تعمل
+  smoothing قبل ما تبدأ هنطلع راح تشوفو، هنطلع هون في مجال ناخد Zero
+  Crossing، يعني يا ترى، أوكي، في مجال، هون بلش ننضيم مع شوية Noise، ما
+  بالك لما تكون Noise على الآخر، لا First، يعني بيجوز شوي Surviving الـ
+  First، لسه طلعوا نوعاً ما Surviving الـ First، بس لما يكون Noise أكتر،
+  يعني إنت أشتغل على مستوى Sigma، لما تيجي تحكيلي أنا بدي أعمل Random
+  Noise، وأعطي Sigma، فطلع أثر Sigma عليها، هاي مشكلتي في الـ second
+  derivative. طلع كيف لما يكون فيه noise؟ طلع إنت بتحلم تاخد الـ zero
+  crossing. ولا راح تشوفه. بلسلوب في الـ second derivative بتغيرش فبتلّي
+  0. أوكي، فالمهم we cross the 0. هذا الـ zero crossing هو اللي بيهمني
+  في الـ second derivative، اللي ما فيش داعي أستخدم 3-holding زي ما أنا
+  مضطر بالـ first derivative. Okays، okays، okays، طيب، فش في نحناء
+  ونحناء، فبالتالي الـ second derivative ع كل الأحوال رح تكون peak، طلع
+  peak value و peak value، إحنا في المثال اللي أخدته رسمته لكم إياه فيها
+  نحناءات مش زي هاد، فبالتالي طلعت نوعاً ما هيك، بس ما أفرق، هاد أسهل
+  بكتير، لأنه هاد إيش؟ عبارة عن نفس الـ slope يعني هو value وحده،
+  فبالتالي خلاص يعني إنت لما تمشي هون لتحسب الـ slope، أنا لازم أعمل
+  smoothing. هلأ هادا متل ما حكينا هاي الـ profile تبع الـ grayscale هيك
+  الشكل الحقيقي للمشتقة تبعته الـ first derivative. إحنا أخدنا مثال آخر
+  قبل شوي هيك في شوية إنحناءات. مزبوط الـ first derivative قلنا هادا الـ
+  function الـ first derivative تبعته هداك كانت عنا هيك أسهل شويّة. هادا
+  أجمل لأنه هادا طالع لي straight forward فيش فيه حصل عاشي هيك. اوف.
+  فانت مضطر شو تعمل؟ يلا شو الحل؟ noisy image حتى الـ second derivative
+  اللي متوقعينها جميلة جداً تساعدّي بس بالـ zero crossing ما تحلمش تحصل
+  عهاي السيجنال. شو مضطرين نسوي؟ لا مش normalization شويّاً ورا فكّر
+  فيها في noise. بتعمل باك بيك زي كأنها بن يعني، وبترجع هيك على الـ 0،
+  ضرب فوراً. بس إحنا قلنا بالعادة نو، عنا شوية هيك هيك الشكل الحقيقي
+  بكون هيك. And even even could be worse مثلاً مثل هيك، بس الأسوأ من هيك
+  إنه في عندي noise أنا، noise. فلما تاخد لسه الـ derivative تبعت الـ
+  noise، الـ second derivative تبعت الـ noise، unfortunately إنت تفكر رح
+  تحصل على هذا؟ لقى 0 grossing؟ لا، رح تحصل على إشي هيك. هناك الكثير من
+  الأزرار. يسأل الواحد ما السبب؟ نحكي لك يا عمي، العدسة تبعت الكاميرا،
+  الـ sampling، الـ quantization، الـ acquisition، كلاته ما بعطيك
+  perfect يعني exact sharp edges إلا يصير شوية blurring على شوية بسبب
+  الـ sampling أو بسبب العدسات تبعتك بالإضاءة، يعني هاي الأسباب الحقيقية
+  اللي بتخلي إنه ما نحصل على exact step function هيك، واللي هو المفروض،
+  كامل. طبعاً هاي حكينا إحنا الحياة الوردية هون إنه بكون عندك step
+  function بتكون ماشي إنت ما شاء الله في grace scale معين فب إللي إنت
+  نافتت على scale تاني بس الحياة مش هيك فيه noise وبالتالي مستحيل يكون
+  شكل الكارف هيك بيكون هيك بالعكس بيكون أسوأ بكثير كمان it could be
+  noisy. noisy جداً كمان يعني there is a ليه هيك؟ وهذا الـ edges تبعتك
+  مسكت هيك؟ لا يا عمي أنا بدي توصله، وطبعاً رح نتعرف عليه من هون لآخر
+  الفصل كيف إحنا بنوصل وكيف نبني boundary أو contour كامل. تجوه ثيتا.
+  أوكي حفلة كبيرة معناته الـ second derivative كان help me وبعدين هون
+  بدك تستخدم إيش؟ مضطر إيش؟ 3-holding. هون دولي ولا إشي 0-crossing. مدام
+  في عندي 0 نزل من سالب لموجة وموجة بلسالب معناته قطع الـ 0 معناته كان
+  في تحول إذن كان الـ first derivative عند الـ peak واقفة وبالتالي هاد
+  أكبر دليل إنه في إج. المثال اللي حكيته. طيب، معناته إحنا من جماعة الـ
+  first derivative والـ second derivative مشان نوجد الـ edges يا عمي
+  والـ curves، مشان بالآخر هي الـ gradient operator حكينا مين أفضل؟ أكيد
+  لا بلاس. ليش؟ الـ second derivative أسهل لأنه هاي بعد فيها first
+  derivative باتجاه X و first derivative باتجاه Y، وبعدها تحسب
+  الماقنيتود، وبدك تجهو في theta. zero crossing. خلص بكفي. طبعاً مش عارف
+  بصراحة إذا أنا أعطيتكم profile لـ gray scale image الـ profile كيف
+  بتطلع وتنزل أعتقد في الـ slides في الـ في الـ spatial يمكن. في مثال
+  عليها كيف بصير zero crossing. I think yes I remember موجود في slides.
+  بتقدر ترجعوا كمان على المثال اللي حكيته. اللي طلعت معي. معناته إحنا
+  بالـ first derivative هو اللي ضروري نعمل 3 shots. بالـ second
+  derivative يكفيك إنك تحذر على zero crossing. بس إنت تطبق الـ send
+  derivative وروح تدور في قلب الـ image. عنات الـ g of x اللي طلعت؟
+  احكيلي بعد ما عمّدكوا evolution للـ image. و جدّت هالمطارح اللي فيها
+  zero crossing. طبعاً هذا مثال على اللاين كيف عملنا له 3 شولدينج أخذنا
+  إحنا قبل 45 الكيرد ما المشينا عليه وعملنا 3 شولدينج قلنا له يا عم اللي
+  أكثر من هيك أعتبره 3 شولدينج غير هيك بديش أعتبره 3 شولدينج فهذه
+  النتيجة اللي طلعت معي derivative. طبعاً في انت كيف؟ يعني فيش داعي انت
+  على الـ image الأولى تريد تعملي كمان مشتقّة؟ لا بتقولي بطبّق الـ
+  second derivative لا بلاس. فإحنا الـ del تبعتنا بتصير الـ del square.
+  اللي هو الـ second derivative واللي هو على شكل لا بلاس. تمام؟ تمام.
+  وقلبناه عشكل إيش كيرنال صح؟ يعني إذا بده طلع السكن بده أطبق أخرى مرة؟
+  يعني أمشي الكيرنال أخرى مرة؟ لا، طبقوا لابلاس فوراً، اللي قابلوا
+  لابلاس شو عمل؟ طلع شو عمل؟ راح على الإيميج، ما أخد الفرق بين هاي وهاي
+  فقط، شو سوى؟ لا قال، الفرق بين هاي وهاي وهاي وهاي، فتلقائياً أخد إيش؟
+  السكن ديريفاتيف، الكيرنال. لا هو هذا إحنا إحنا الـ first derivative
+  أصلاً كيف نطبقه؟ عشان الـ kernel ببساطة. يعني الـ الـ first derivative
+  كنت لك تطبقه في هذا الـ kernel البسيط. يعني إنت بتعملي مجرد هذا الـ
+  kernel، ها؟ عسبيل المثال. هاد الـ first، هاد كل الـ first الـ first.
+  آه والـ second derivative اللي هو لا بلاس مثلاً، وبتقدر تعمل أفضل من
+  لا بلاس لسه في عنا يعني. عنا كثير كنات، أنا قصدي ما أحكي عن الـ first
+  و second كله قلبناه عشان ‫ممتلّ الفكرة؟ ‫آه، واضح، دكتور. ‫- قلّي
+  اسألكم كلكم بما إنّه هاتش مشفّر. ‫- دكتور، أنا لما أطبّق الـ first
+  والـ second related، ‫إنّه المستخلّ الأولى والتّانية، ‫ما بحتاج أطبّق
+  kernel، ‫واللي هو بعد الـ kernel. 0 crossing خلاص بتعرف إنه في إج وين
+  تماماً لا في 3-should ولا بتفكر فيه. اللهم بتاخد الـ second derivative
+  للـ image بتروح تدور وين في عندك 0 crossing؟ انتقلت الـ image من ناقص
+  6 0 6. تقول لي استنى شوي. تتتتتو زارع عندي 0 crossing. قطع من سالب إلى
+  موجب. مدام نط من سالب إلى موجب إنسى. أو من موجب إلى سالب معناته فيه 0
+  crossing معناته بتقول لي هاي الـ point edge. إنسى هاي تاب على الـ
+  line. مش زي الـ first derivative. فهمتوا الفكرة؟ إنه فيه Zero Crossing
+  يعني نزل من Low لHigh أو من High لLow بفرقش معاي إذا ظهر أنازل يكفيك
+  تعرف إنه تبحث على الـ Image وين فيه Zero Crossing هايك، وهاي طلع كيف
+  في عندي نفس الشي، value في عندي، في عندي value negative، أوكي، بعدها
+  تبلش ترجع للـ 0، فمضطر أرجع للـ 0. آه، شوفوا شوفوا هاي الـ point اللي
+  مرت في الـ 0، اللي هي اللي عندي المشتقة لما كانت equal 0 المشتقة
+  التاني، شايفينها؟ هاي يكفيك إنه فيه. لسه. لعند البيك هون النقطة التحول
+  الرئيسية. نقطة التحول الرئيسية شو مشتقة عند هاي البونت يا جماعة؟ مشتقة
+  هون؟ مشتقة المشتقة. شو المشتقة هون؟ أكيد زيرو. صح؟ معناته أنا مضطر
+  أنزل انتبهوا هيك فجأة نفس الفكرة في هذا الاتجاه اللي أنا طالع فيه،
+  بلّش يطلع وبدّي بلّش ينزل. طبعاً مش أبربت، يعني مش line، أنا مش بطلع
+  وبنزل على نفس الـ line، في شوية إنحناء أكيد، فبالتالي انتبهوا، بحصر
+  عندي هيك، اطلعوا كيف؟ كيف هون طلعنا ونزلنا؟ نفس الفكرة، بدي أطلع
+  وأنزل، انتبهوا، هلّا هاد الـ line، أنا بس باخد في هاد الـ part لسّا،
+  derivative. اللي هو الطرح للمشتقة الأولى. مشتقة المشتقة. طيب ممتاز
+  تعالوا نشوفها يا جماعة الـ fair. شو المشتقة هون؟ 0 0 0 0 0 0 تمام؟
+  هماشيين واضحين في الـ 0 كل شي تمام؟ طلع كيف؟ فجأة أو المينيمة. طيب على
+  الـ 3، 5، 11، 60، إلّي بدك إياها. طيب سؤال، هل الماكنتـيود، هاي الـ
+  value، أكبر من الـ threshold؟ مضطرّة تحط الـ threshold، مشان تحكي إذا
+  بتزيد عن threshold، معناته أنا بعتبر إنّه فيّ line. طيب، نشوف الـ
+  second derivative. شو الـ second derivative؟ It means، طلع كيف هون إنه
+  في حالة تحول، إنه فيه انتقال، معناته فيه line عندي، طيب ممتاز، طب شو
+  الـ second derivative؟ هلأ هون، طبعاً إنت حضرتك مشان تسأل، هل هاي كافي
+  الـ magnitude؟ قيمة الـ magnitude للمشتقة كلها، مش بس عند equal 0، هل
+  الـ magnitude هاي الـ maxima، بدنا الـ maxima أو الـ minima؟ مزبوط؟
+  فبتكون local minimum. فإنت إذاً لما تعمل first derivative وتاخد الـ
+  absolute value تبعتها، بدك تروح تشوف وين المشتقة equal 0، وهذا اللي
+  بهمّك، لأنه عند الـ 0 إنت، إذا بتنتبهوا، عند الـ 0 it means هاي الـ
+  point. ليش؟ لو أخدت الـ absolute value تبعته، يعني لما كان الـ slope 0
+  بالعرب الفصيح، هاي الـ maximum. إذاً إحنا منوجد الـ maximum الـ local
+  maximum، طبعاً لو إنه الرسمة بالشكلوب، لو إنه الرسمة هيك، منوجد إيش
+  إحنا؟ الـ local minimum، سعيتها بيكون المشتقة تبعته هيك، مزبوط؟ أنا مش
+  أبربط فجأة بنزل 0 هيك، لا طبعاً، تقول لي لا، إنتك تنزل متل ما طلعت
+  بهدوء، بدك تنزل بهدوء. آه، إذاً، وبتكمل 0، صح؟ مش هيك؟ هاي الـ first
+  derivative. طب شلو بهمك؟ إنت بهمك هاي الـ point. صح؟ صحيح. بده يبلش
+  بده يبلش، ممتاز، معناته، انتبهوا، رح يصير عندي أنا عندي الـ
+  derivative، أوب أوب، ما شاء الله تلتوصل الـ الـ best تبقى إحا، بعدها
+  بيبلش إيش؟ طلّعوا الـ derivative شو مالها؟ انتبهوا، تقل. تقل. أوكي،
+  بتقل الـ derivative، وبالآخر شو بترجع هون؟ طبعاً هذا بكون أوفقي، شو
+  حكينا هذا؟ لـ 0. 0، معناته، طبعاً أنا مش أبربت فجأة بس، 0. وهون؟ 0.
+  وهون؟ من ضل ماشيين 0 0 0، واضح إنه الـ first derivative بدنا نمشي فيها
+  إحنا ماشيين عـ 0، عـ الـ first derivative، بيجي هون، واضح إنه بلّش
+  التغيّر، بلّشت عميّك التصاعد صح؟ هادي F of X هادي F of X. نحكي طبعاً
+  الـ F of X بدّا ما احكي F of X و Y أسهلنا. مو متاز كتير. شو الـ first
+  derivative يا جماعة؟ هات لانشوف. حدا يشبكي معاي بالله لو سمحتوا what
+  is the first derivative لهذا الـ curve. يلّا نمشي مع بعض. حدا يساعدني؟
+  إيش المشتقّة هون؟ 0. نرسم الآن. نغير اللون. نشوف كيف الـ line profile
+  تبعنا. نصغره شوي نرفعه كمان. So let's assume we have something like
+  this في الـ image. هلأ بدي حاول أرسمها بإيدي مشان يكون فين إنحناء هنا
+  وعمّا. هيك شوي شوي. نتأكّد ليش؟ هاتّا نرسم ونعرف ليش الـ first
+  derivative ما بهمّها والـ secondary derivative المشكلة. assume هاي بدي
+  أرسم ... no, let me أعمل slide إضافيّة، ثواني. أضيف slide بيضة نرسم
+  عليها. Okay. Full screen. أو ال vertical. Okay. فبيكون عندي الكرنة
+  الشغال بالشكل هذا. بيمسك بس ال horizontal أو ال vertical. هيك how we
+  do. وبعدها نعمل thresholding ونتأكد إنه موجود أو مش موجود.
+  والthresholding عادةً we need it. ركزوا معي كمان مرة. ال thresholding
+  بدنا إياه بال first derivative. ال second derivative does not need
+  thresholding. نتأكد ليش؟ it happens now بدل ما نعمل هذا الكلام
+  alternatively we can we have we are interested in detecting all the
+  lines in an image in the direction عادة عادة خلص انت امسكلي الهريزنتل
+  الهريزنتل lines مثلا أو ال vertical من الأكبر؟ وين أكبر؟ معناته أنت
+  تابع لهذا اللاين، إلّهو الأفكوي أو العمودي أو الـ 45 موجة أو الـ 45
+  سالب، depends. So... بس this is something stupid، يعني we don't need
+  to do that. عادةً عادةً، إبنّي أمسك الخطوط الأفكوي أو العمودي، of
+  course في عنا إحنا كيرنل واحد، يعني it can do it، بس actually this is
+  how it happens. معناته تابعة البيكسل هاي اللي لقيتها تابعة لهذا الـ
+  edge اللي هو الخط 45 سالم. طب إذا لقيت هاي أكبر معناته we try to do
+  like the following. We try to compute كل الـ responses من each من الـ
+  kernels ومن يجي نسأل مين الأكبر؟ وبتاخد response هادا والـ response
+  هادا لنفس الـ point، لنفس الـ point اللي مش مشكل الـ kernel، فبتحكي لي
+  رينافرد هاي الـ response الأول، الـ response الثاني، للـ kernel
+  الثالث، للـ kernel الرابع، كل راسمان هاد يجي تحكي يعمل مين أكبر واحد؟
+  تحكي لي هاد، معناته اسمع الـ pixel تعود إلى خط vertical وليس أي خط آخر
+  إذا إنت شاكك فينه، هي تابعة لهذا الخط، طب إذا كانت R4 اللي أكبر معناته
+  can do it. طيب بيحكي لي واحد طب كيف أمسك أنا في الـ images الـ edges
+  كلّاتها؟ على الأقل على الأقل للـ أوفقي والعمودي واللي بزاوية 45 موجة
+  بـ 45 سالم؟ بيحكي لي ولا إشي، طبّق هالـ kernel هاتي الأربعة، طبّق هاد
+  الـ kernel على الـ images، وخد الـ response تبعه. 2، أوكي، ومنقويسها
+  على كل الـ points، هادا الـ kernel. هاي مش هنتقويس إيش؟ الخطوط
+  العمودية. هاي مش هنتقويس الخطوط الأفقية اللي نازلة بدرجة 45 minus. طب
+  هاي، مش هنتشوف للـ lines اللي طالعة أو فيها raising edge على شكل ramp
+  أو raising edge بزاوية 45. طب ما بحكي الواحد فيه غير 45، بل نقول لك مش
+  مشكلة، we can do it. نضربه في 2. We need to detect هاي من هاي، نطرح
+  هاي، يعني 2 f of x نطرح منها هاي، نطرح منها هاي، هاي معدل التغيّر
+  السابق واللاحق، هادي هو الـ second derivative ببساطة يعني، في مفهوم
+  الـ image عم نسّله الـ pixels. فعمليّاً، فهمتوا ليش الـ operator هيك
+  شكله؟ لأنه هاي الـ point اللي قبلها وهي الـ point اللي بعدها، وهي
+  ضربناها في 2، okay. الـ center. آه، أوكي، معناته f of x plus 1 و f of
+  x طلع كيف؟ minus 1، كلاتهم بدنا نكريم منهم إيش؟ مرتين ما هي 2 f of x.
+  من هون أجد فكرة إنه 2 بالنص، انتبهوا، مضروبة في 2، هلأ نرسمها؟ آه
+  فعندي 3 بيكسلز كيف بوجد الساكند ديريفاتيف؟ قلنا سهلة كيف؟ بتقول لي هاي
+  اللي بعدها ناقص السنتر وهاي ناقص السنتر بيكسلز. اوكي؟ فأنا بدّي اشوف
+  عند الـ value هاي عند f , طبعاً بس أنا باخد x أسهل برج التسهيلة،
+  وبتحكي لي في عندي هون f اللي بعدها، وكان في عندي أصلاً قبل هنسينا
+  نرسم، هلّا نرسمها. vertical lines vertical lines ما هو بتقولك اللي
+  تبعتبد على الـ derivative بحكي لك أيوة طيب هي second derivative. شي هي
+  الـ second derivative؟ هلأ مش هنذكركم فيها الـ second derivative كانت
+  قائمة على هذا الـ concept على هذا انتبهوا. الـ first derivative اعتمدت
+  على 2 pixels بحد بعض. لكن الـ second derivative اعتمدت على 3 pixels.
+  طيب، let's move يعني a bit more، وبتحكيلي تعالي نشوف إلنا شوي هيك
+  better algorithm، هذا الـ algorithm نوعًا ما بده يحاول يمسك الـ line،
+  مش مجرد الـ point. Yes، في عنا different actually, different masks
+  that can help us to detect horizontal lines. is above if the response
+  اللي هو هذا الكمبيوتشن اللي هو الكونفولوشن هاي ضرب هاي زائد هاي زائد
+  هاي زائد هاي طبعاً بالناقص زائد هاي زائد هاي كل ياتو بده أطرح منه هاي
+  الكلمة المضربة بأربعة إذا كانت أعلى من three-should have the response
+  معناته yes we agree there is a point otherwise no there's no point إذا
+  أخذنا الأربعة neighbors برضه لا بلاس هذا بس أربعة neighbors بياخد إذا
+  متذكرين يصير قيمته هيك. تمام؟ فأنا مضطر آجي أقويس if the threshold is
+  above it's a point. T عادةً لازم تكون positive. الـ 3 شوية بنحطه
+  positive. والـ response هو عبارة عن some of the products of the
+  coefficients. Of course هاي ضرب هاي وهي ضرب هاي لقبال هالـ crossbook
+  وهي ضرب هاي ضرب هاي. ضرب هاي يعني عملياً إجمع الجيران واترحهم من قيمة
+  8 مضروب الجار. طبعاً الـ 8 ليش؟ مش 4. لأنه اضطررنا ناخد الـ 8
+  neighbors. بس إذا أخدنا So a point can be detected at any location on
+  which the mask is computed إذا كان الـ response عند ذاك الـ mask أعلى
+  من الـ threshold معين معناته yes it's a point الـ second خلص محلولة
+  هلّي بنحكي كيف محلولة بس الـ first derivative مشكلتي فيه إنّه إنّه
+  seriously إذا أنا اضطريت أعمل first derivative مشان أمسك الـ edge أنا
+  مضطر أروح أعمل thresholding طب بتقولي و الـ second بحكي لك لا هو مجرد
+  zero crossing قال أبشرحه يعني بنفهم كيف الأمور سهلة في الـ second
+  derivative و كيف الـ zero crossing برجع أذكركم فيه so a point can be
+  يعني how to do it in a better way في طريقة smart أكتر إنّا نستخدم
+  multiple thresholding. Okay؟ فإذاً، إذاً أنا فكرتي إنّو أنا I can use
+  operator بس هذا الـ operator بما إنّو نحكي على يعني عم نستوّل point،
+  اللي أرجح، اللي أرجح في الـ point أنا بحكي على الـ first derivative،
+  انسوني من الـ second. الـ second الـ second
+
+========================================================================
+END OF REPORT
+========================================================================

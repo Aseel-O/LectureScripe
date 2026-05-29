@@ -1,0 +1,16 @@
+{
+    "epoch": 10.0,
+    "test_cer": 0.1845,
+    "test_cer_norm": 0.1138,
+    "test_loss": 0.5448797941207886,
+    "test_runtime": 33.8129,
+    "test_samples_per_second": 0.296,
+    "test_steps_per_second": 0.148,
+    "test_wer": 0.3214,
+    "test_wer_norm": 0.1813,
+    "total_flos": 2.732494159872e+18,
+    "train_loss": 4.6899150323867795,
+    "train_runtime": 2809.1689,
+    "train_samples_per_second": 0.285,
+    "train_steps_per_second": 0.018
+}

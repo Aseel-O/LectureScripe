@@ -1,0 +1,478 @@
+========================================================================
+TRANSCRIPTION REPORT
+========================================================================
+Fine-tuned model : ./whisper-merged-ar-ps
+Baseline model   : openai/whisper-large-v3
+Audio directory  : data/audio
+Lectures         : 1
+Total segments   : 100
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lecture : NLP_20260221
+  Segments total  : 100
+  Flagged         : 3
+  Duration        : 2191.3 s
+  Segs w/ ref     : 100
+
+  Model                      WER (raw)   WER (norm)  CER (raw)
+  ───────────────────────── ────────── ──────────── ──────────
+  Baseline (large-v3)           0.6839       0.5584     0.4243
+  Fine-tuned                    0.3628       0.2522     0.1408
+  Improvement                  +0.3212      +0.3063    +0.2835
+
+  Auto-flagged segments:
+    segment_007: ['repetition_loop (ratio=0.98)', 'high_cer (cer=1.74)']
+    segment_056: ['too_sparse (wps=0.04)', 'high_cer (cer=0.98)']
+    segment_086: ['too_sparse (wps=0.05)', 'high_cer (cer=0.99)']
+
+  Segment details:
+  ID                   Dur(s)   WER-FT   WER-BL   CER-FT  Flag
+  ──────────────────── ────── ──────── ──────── ──────── ─────
+  segment_001            20.9   0.4118   0.4118   0.0798    no
+  segment_002            18.8   0.2800   0.4600   0.0767    no
+  segment_003            21.3   0.2391   0.7609   0.0505    no
+  segment_004            22.3   0.2222   0.4630   0.0805    no
+  segment_005            15.3   0.0690   0.4828   0.0111    no
+  segment_006            25.0   0.3818   0.6182   0.1073    no
+  segment_007            23.2   2.8421   0.5263   1.7352   YES
+  segment_008            11.0   0.2727   0.5000   0.0441    no
+  segment_009            17.4   0.3421   0.5263   0.0829    no
+  segment_010            22.0   0.1818   0.8864   0.0420    no
+  segment_011            20.0   0.1702   0.4255   0.0430    no
+  segment_012            21.0   0.2273   0.4091   0.0738    no
+  segment_013            21.1   0.3043   0.8696   0.0996    no
+  segment_014            21.9   0.2609   0.6739   0.0824    no
+  segment_015            20.6   0.2821   0.7692   0.1215    no
+  segment_016            10.6   0.1905   0.9524   0.0373    no
+  segment_017            23.0   0.2927   1.1220   0.1015    no
+  segment_018            23.5   0.2222   0.7333   0.0577    no
+  segment_019            23.8   0.6923   1.0000   0.2468    no
+  segment_020            26.8   0.1852   0.5185   0.0723    no
+  segment_021            22.7   0.3636   0.6909   0.1042    no
+  segment_022            24.0   0.3393   1.4286   0.0943    no
+  segment_023            24.8   0.1429   1.5000   0.0511    no
+  segment_024            23.8   0.2963   0.5370   0.0891    no
+  segment_025            13.8   0.4062   0.8125   0.1472    no
+  segment_026            23.6   0.2097   0.7258   0.0473    no
+  segment_027            24.6   0.2041   0.4490   0.0738    no
+  segment_028            21.6   0.4894   0.8298   0.1372    no
+  segment_029            24.7   0.4500   0.5750   0.1098    no
+  segment_030            21.3   0.4146   0.9024   0.0895    no
+  segment_031            24.4   0.2549   0.6863   0.0552    no
+  segment_032            24.9   0.3462   0.6923   0.1060    no
+  segment_033            23.9   0.0930   0.3721   0.0195    no
+  segment_034            22.7   0.2128   0.7872   0.0524    no
+  segment_035            22.5   0.2241   0.5517   0.0939    no
+  segment_036            23.9   0.3585   0.3585   0.1045    no
+  segment_037            23.1   0.3478   0.5000   0.1235    no
+  segment_038            22.4   0.3673   0.5306   0.0979    no
+  segment_039            23.0   0.3043   0.6304   0.0886    no
+  segment_040            23.9   0.2353   0.5882   0.0851    no
+  segment_041            22.0   0.3864   0.7955   0.0950    no
+  segment_042            23.4   0.4310   0.8793   0.1234    no
+  segment_043            17.1   0.1714   0.4286   0.0490    no
+  segment_044            22.1   0.2750   0.7500   0.0528    no
+  segment_045            24.8   0.4545   0.9818   0.1475    no
+  segment_046            24.1   0.3261   0.6739   0.1617    no
+  segment_047            23.1   0.3774   0.7736   0.1479    no
+  segment_048            23.3   0.4528   0.6415   0.1761    no
+  segment_049            18.7   0.3889   0.7778   0.1111    no
+  segment_050            24.8   0.2292   0.6458   0.1075    no
+  segment_051            21.8   0.5000   0.9062   0.1292    no
+  segment_052            19.7   0.2500   0.6591   0.1162    no
+  segment_053            22.5   0.1556   0.8667   0.0672    no
+  segment_054            22.9   0.2653   0.6735   0.0625    no
+  segment_055            18.2   0.4390   0.8293   0.1850    no
+  segment_056            23.3   1.0000   0.6977   0.9837   YES
+  segment_057            21.5   0.4054   0.7838   0.1345    no
+  segment_058            23.2   0.2979   0.3404   0.0909    no
+  segment_059            16.4   0.2286   0.5429   0.0829    no
+  segment_060            23.1   0.4048   0.6905   0.1355    no
+  segment_061            22.2   0.3143   0.7429   0.1075    no
+  segment_062            20.5   0.5000   0.7727   0.3249    no
+  segment_063            20.7   0.2449   0.8163   0.1179    no
+  segment_064            21.0   0.5128   0.9231   0.1940    no
+  segment_065            24.1   0.3200   0.4800   0.1620    no
+  segment_066            22.6   0.5652   0.6957   0.1826    no
+  segment_067            18.3   0.3200   0.6000   0.1397    no
+  segment_068            22.9   0.3000   0.9667   0.1071    no
+  segment_069            19.7   0.4000   0.7714   0.1122    no
+  segment_070            17.9   0.4242   0.6364   0.1517    no
+  segment_071            23.4   0.2826   0.5652   0.0591    no
+  segment_072            22.5   0.2727   0.6136   0.1353    no
+  segment_073            22.5   0.2093   0.9070   0.0553    no
+  segment_074            24.2   0.2222   0.8000   0.0502    no
+  segment_075            24.2   0.3333   0.4444   0.1168    no
+  segment_076            23.2   0.3333   0.6667   0.1025    no
+  segment_077            24.3   0.2444   0.4889   0.0741    no
+  segment_078            22.7   0.2708   0.5208   0.0856    no
+  segment_079            22.4   0.3261   0.4348   0.1176    no
+  segment_080            19.6   0.2286   0.6286   0.0596    no
+  segment_081            21.7   0.3404   0.3830   0.1000    no
+  segment_082            21.7   0.3659   0.8049   0.1250    no
+  segment_083            25.0   0.5946   0.7838   0.3560    no
+  segment_084            23.1   0.5000   0.7619   0.1659    no
+  segment_085            23.8   0.4255   0.5745   0.1609    no
+  segment_086            21.4   1.0000   0.6585   0.9881   YES
+  segment_087            20.9   0.4706   0.8824   0.1692    no
+  segment_088            22.5   0.4750   0.7500   0.1200    no
+  segment_089            24.8   0.4643   0.6429   0.1630    no
+  segment_090            19.0   0.2727   0.7273   0.0645    no
+  segment_091            22.5   0.2703   0.7838   0.0732    no
+  segment_092            21.6   0.4000   0.6889   0.1494    no
+  segment_093            23.7   0.3684   0.5263   0.1050    no
+  segment_094            20.6   0.3488   0.6047   0.1235    no
+  segment_095            22.5   0.4545   0.8182   0.1756    no
+  segment_096            20.1   0.3333   0.6333   0.0895    no
+  segment_097            24.2   0.2500   0.7500   0.0941    no
+  segment_098            25.0   0.2549   0.5098   0.0703    no
+  segment_099            21.5   0.2917   0.4375   0.0858    no
+  segment_100            21.7   0.2000   0.6000   0.0649    no
+
+  Full transcript (fine-tuned, unflagged segments):
+  --------------------------------------------------------------------
+  السلام عليكم، نبدأ محاضرتنا اليوم. موضوعنا اليوم في مادة الـ Natural
+  Language Processing، اللي هو الـ Text Classification بشكل عام، ورح
+  نتكلم برضو على Sentiment Analysis as a Special Case for Text
+  Classification. طبعاً موضوع مهم في عالم الـ Natural Language
+  Processing، بجوز يعني أول ما إنت تسمع كلمة Text Classification، تختر
+  في بالك تطبيقات كثيرة. Classification عارفينه من Machine Learning،
+  إنّي أنا معي عندي مجموعة من الـ classes، بعطيني document، وهذا الـ
+  document اللي هو أصلاً مكوّن من tokens وكلمات كيف بدّي كيف بدّي أعملّه
+  assignment لإحدى الـ classes اللي موجودة بين إيديّ. الظاهر أمامنا
+  مثلاً إحدى التطبيقات spam email detection. إذاً الـ emails اللي
+  بتوصلني كيف إشي بتروح منها على الـ inbox وإشي بتروح منها على الـ spam،
+  هاي machine learning process، ممكن تكون rule-based process، لكن في
+  الغالب في الغالب نضطر نبني machine learning based application
+  classifier that can classify whether the email is spam or not، وعنّا
+  أكيد بتخطر في بالك شغلات كثير، زي شو الكلمات اللي موجودة في الإيميل؟
+  هل في إشي منها بدلّ إنّه spam ولّا لأ؟ مين المرسل؟ كل هاي الشغلات اللي
+  بتخطر في بالك في features إنت بتوظّفها، بتوظّفها في الـ machine
+  learning process اللي بتحاول تبنيها. تطبيق آخر مثلاً إنّه الـ author
+  identification، بتعطيني مجموعة من الـ documents، مجموعة من الـ
+  articles، والـ task شو هي؟ شو هي؟ أنا أحكي لك هاد الـ article أنا ولي
+  ألفه من الـ author، من مجموعة من الـ authors تكون محددة عندي مسبقاً.
+  طبعاً الـ كل author بيكون إلو منشورات سابقة، article سابقة، هلأ بنبني
+  classifier يتعلم طريقة كتابة كل author، شو عادة من الكلمات اللي
+  بستخدمها والمصطلحات اللي بذكرها في الـ في الـ document تستاعونه، وقتها
+  بصير الـ الـ analysis يعني بتكون الفكرة وين؟ إنه في عندك مجموعة من
+  documents، reviews، sentences، بدك تصنّف كل واحدة شو الـ sentiment
+  polarity إلها. الـ polarity إلها. هل الـ user وهو يكتب للجملة هاي كان
+  انطباعه جيد، ولا سيء كان مبسوط، ولا حزين؟ طبعاً ذكرنا في أول محاضرة
+  أهمية الـ sentiment analysis وتطبيقاته، والفكرة منه، لكن بالمحاضرة هاي
+  بدنا نفوت في عمق أكثر. أكثر، كيف ممكن نبني models تتناسب مع الـ
+  sentiment analysis. يعني مثلاً في عندك هون مجموعة من الـ reviews، أول
+  واحدة unbelievably disappointing، واضح إنها هاي negative، وبدنا الـ
+  system يصنّفها as negative، الثاني positive لأنه في mentioning فيها
+  لكلمات positive، الثالثة positive positive، الرابعة negative. يعني إنت
+  ممكن يخطف في بالك أول ما تشوف إشي زي هيك، أوكي؟ إنت عطيني مجموعة من
+  الـ reviews positive ومجموعة من الـ reviews negatives، وأنا بدّي أخليه
+  يلاحظ شو الكلمات اللي بالعادة بتنذكر مع الـ positive بأكثر تكراراً،
+  ووقتها بيكون في عنده classifier. الـ classifier. بس تتبين إنّه هاي الـ
+  task is not as easy as we have already mentioned لأنّه في كثير عوامل،
+  تدخل في الموضوع راح نذكر بعضها. What is the subject of the article؟
+  هاي إحدى الـ classification problems، بتعطيني مجموعة من articles
+  articles، عطيك subject إلها، بتكوني طب أنا شو يعني، هل هي مهمة هاي الـ
+  task؟ ده اللي اشتغلوا في الأنظمة أكيد واجهوا مثلاً مجموعة هائلة من الـ
+  documents، خزّنوها والله في الـ repository عندهم، لكن هاي ممكن تكون
+  مئات الألاف، وانطلب منهم إنه لازم يكون فيه عنوان. في عنوان أو subject
+  أو general بيسموها لكل article. هل أروح manualي أمسك كل article وأكتب
+  له عنوان أو أحدد الـ subject؟ لا، لازم أكون أستخدم إشي smart،
+  NLP-based application، يقرأ الـ document، يحاول مثلاً يعملها mapping
+  لأحد الـ classes، لأحد الـ subjects. الـ subjects. ونهّدّى موضوع مهم
+  حتى هون اللي بنحكي فيه إحنا كلّه supervised machine learning، يعني
+  بتخيّر عندي أنا training dataset annotated وابني classifier، بس هادا
+  اللي هو subject identification حتّى فيه إلّه track كبير unsupervised.
+  unsupervised. topic modeling اسمه، كيف إنّك بدون ما أعطيك أنا training
+  dataset تحدّد، تفصل الـ documents لـ different topics subjects.
+  subjects. إذاً هذا هو الـ في تطبيقات إذاً عدة، ممكن نتخيل إحنا الـ
+  text classification كتير في fields بتستخدمه، زي تحديد الـ subjects، زي
+  ما حكينا لكم وثائر مش في الـ identification، language identification
+  هعطيك نصوص وتقول لكل نص ضمن أي language، sentiment analysis analysis
+  الى آخر. هلأ نفوت في الـ problem definition طبعاً very straight، very
+  concise واضحة شو الـ problem، يعني شو الـ input وشو الـ output. عندي
+  أنا document وعندي مجموعة من الـ classes. وظيفتي إنّي أبني model عند
+  هذا الـ document يحكيلي يتبع لأي class. الـ A class. Okay. هلأ في كثير
+  methods منبنّت على الـ text classification. rule-based. Okay إذاً زي
+  ما حكينا في methods ممكن تكون بسيطة في الـ classifications، method
+  أخرى أكثر تعقيداً، بلّش في الـ classification في الـ rule-based rule
+  based on combination of words or other features. شو يعني؟ يعني مثلاً
+  خد spam email detection، وقول لك كان يحط rules مش machine learning،
+  إذا الإيميل إن وجد فيه مثلاً كلمة dollar أو millions، أو إذا الإيميل
+  كان جاي من address أنا بعرف already هو من الـ blacklist إلى آخر،
+  if-else if-else rules، rules باستخدام إحدى الـ dictionaries، lexicons
+  يعني مجموعة من الـ emails هدول blacklist إلى آخره، هدمجوهم مع بعض
+  بطريقة إنّه صرت لو أعطي إيميل إحكيلي، أدهوا spam or non-spam، مش
+  machine learning، هذا بيقول لك إيش؟ أعطى نتائج، ممكن تكون الـ accuracy
+  can be high، والـ precision تحديداً إنّه الـ once إني حكيت إنّه هادا
+  in very specific domains طبعاً. If rules are carefully redefined and
+  crafted by the experts. بس شو المشكلة في الـ rule-based؟ Building and
+  maintaining rules is expensive، يعني أكيد الـ hackers أو الـ intruders
+  بحاولوا دائماً يخلقوا كلمات جديدة، مصطلحات جديدة، يكسروا الـ rule
+  تبعتك، فبدّك إنت to continue... to continuously maintain الـ rules
+  هاي، بظلّك بظلك التركيبة الـ rules اللي حطيتها تفحصها هل still valid
+  ولا لا، بدها جهد. They are too literal and specific. High precision,
+  low recall. شو يعني؟ يعني أكيد في إيميلات كثير spam بس إنت مش قادر
+  تكتشفها لأن الـ rules اللي حطيتها بس مخصصات عند أكم إيميل إنت شفته.
+  فالـ recall بيكون واطئ بالعادة. واطب العالم. هلّأ هو دائمًا اللي بحدّد
+  هل الإيميل spam ولا لا؟ مش rule واحدة ولا سنتين تحبتهم فيه، if else،
+  لا، عدد كبير من الـ features together with each other each other بتقدر
+  إنت تحدّد بدقة عالية هل هو spam or not، لكن إنت بتقدرش لو أعطاتك 100
+  feature تشبكهم مع بعض في equation ولا في if-else-if-else صعب جداً كـ
+  human إنّك تعرف كيف كل feature بيأثر عالثاني، وتحط مثلاً tree تبنيهم
+  في tree إلى آخره. وبالتالي بدّك machine learning process عشان هيك
+  تركيزنا على supervised machine learning. machine learning. بكون عند
+  الـ document مجموعة من الـ classes و training dataset، كيف شكل الـ
+  training dataset؟ بتكون كل document مع الـ class اللي هي فيها شكل
+  جدول، إذاً آخر colon اللي هو الـ class، مثلاً C1، C2، إلى آخره، اللي
+  هون بتكون هي الـ document بالكلمات اللي بتكونها. اللي بتكونها، كلمات
+  اللي بتكون كل document. فإذاً training dataset, tables of documents,
+  classes bear، شو وظيفتك إنت to learn a classifier؟ function، model،
+  تبني هذا المودل من الـ training dataset، حيث إنا إذا بتعطي إنت
+  document جديد يحدد لك شو الـ class اللي إلو. اللي إلو. طبعاً هلأ إذا
+  أنا أعطتك training dataset، you can try many، طبعاً بعد ما أتحولها
+  لأرقام، you can try a lot of machine learning classifiers زي naive
+  Bayes, logistic regression, neural network, k-nearest neighbor,
+  support vector machine. vector machine، كلها هاي machine learning
+  algorithms، بتطبّقها عالـ training dataset حتى تبني الـ model. طبعاً
+  هالأيام في طرق يعني أحدث راح نيجيها بآخر الفصل، اللي هي الـ large
+  language model، كيف أنا بدّي أطوّعها، عمّلّها fine tuning حتى تشتغل as
+  a classifier، classifier، وكيف ممكن بعضها إنّي أعطيه شوية prompt،
+  يشتغل كـ strong برضه classifier، لكن إحنا بدنا نمشي بالـ basic
+  approaches، نطلع شوي شوي في الـ models هاتي. نشوف الـ naive Bayes،
+  أكيد سامعين في الـ naive Bayes قبل هيك. الـ Bayes theorem سامعين فيها
+  مزبوط؟ أخدنا الـ probability theory theory, conditional probability,
+  independence assumption في الـ probability، كل هاي المصطلحات اللي
+  ذكرتها إذا ناسيها بدك تراجعها، ضروري تراجعها. ولحنا بدنا نشوف الـ
+  naive-based، بدنا نشوف ليش سموه naive، وكيف استخدم الـ base rule حتى
+  يبنوا classifier effective حتى في many scenarios. في كثير حالات بكون
+  فعلاً بعطيك classification output output reliable. إذاً relies on very
+  simple representation of documents. كل ما كنت، كل ما جبت هيك القاعدة
+  العامة طريقة simple وكانت تعطيك نتائج جيّدة، كل ما ضمنت إنّه الـ
+  efficiency إلها عالية برضه، وبالعادة بتحتاجش لـ space كثير ولا
+  computation power عالية. power عالي. فإحنا بدنا نبلّش نشرح عن الـ
+  naive-based ونشوف كيف استخدموه في الـ classification. وبرضه وهم تعرف
+  أبسط الطرق شو الـ output اللي بتعطيك إياه عشان تعتبرها شو baseline. كل
+  ما تطور إشي جديد بتتأمل إنّه الـ evaluation تبعه وأداء يكون أحسن من
+  الـ baseline. من الـ baseline. عادةً في الأبحاث إذاً، لو بدك تطوّر إشي
+  إنتّى text classifier، كيف بدك تثبت للـ community إنّه شغلك مليح؟
+  بتروح تجيب إشي baseline، الـ base على إنّه بيستخدموه as a baseline،
+  بعطيك مثلاً accuracy كذا، F-score كذا، وهلّأ طموحك في أي algorithm
+  more complicated أو أي تعديل على الـ model تبعك إنّه يكون ‫إنّه يكون
+  يتحسّن يعطيك نتائج أفضل من الـ baseline. ‫طيب، عايش بيعتمد الـ naive
+  base؟ ‫ليش سمّوه naive بسيط أو ساذج أو simple؟ ‫لأنّه بيعتمد على الـ
+  model اللي هو back of words، ‫يعني documents كيف بشوفه؟ ‫زيّك إنّه
+  سلّي من الكلمات، ‫شو يعني سلّي من الكلمات؟ ‫يعني بلغي تأثير ترتيب
+  الكلمات الكلمات بالنسبة لبعض نهائياً، مع إنّه مش منطق، ولله ترتيب
+  الكلمات مهم وبعكس المعنى، بس تبين إنّه في حالات كثير وجود الكلمة
+  وتكرارها يكفي إنّك تبني classifier جيّد. إذاً، هذا هو الـ back of
+  words، في طبيعة الأحوال إحنا نترتيب الكلمات مهم، الكلمات مهمّ، في كثير
+  الـ applications. لكن خلينا نعمل relaxation لهذا الـ assumption هلّا،
+  ونشوف كيف الـ naive base أعطانا نتائج مليحة. back of words يعني
+  هالكلمات هذولة اللي إلهم ترتيب معيّن حطّناهم في سلّة، زي كأنّا خلطناهم
+  في بعض، بطّل الترتيب مهمّ، اللي بهمّني وجود الكلّمة وكم مرّة تكرّضت.
+  مرة تكرّضت. وجود الكلمة، إذاً أنا لاحظ شو عملت تقريباً؟ الـ document
+  هذا حوّلته لشو؟ لأرقام، شو هذا اللي بدي إياه؟ ولا كيف بدأ أطبّق الـ
+  machine learning algorithm دون ما أعمل هالـ هالحركة هذه؟ هاي من أبسط
+  الطرق اللي إنت بتعمل فيها feature representation للـ document. للـ
+  document. أبسط شو ممكن تتخيلوا؟ في أبسط منها حبي شو هو؟ إنّك تمثّلوا
+  يا 1 يا 0، يا الكلمة موجودة أو مش موجودة. level أعلى إنّك الـ
+  document، طبعاً تنساش إنت بتكون قبلها شو عامل؟ text pre-processing،
+  normalization، بنظّفها الـ noise، إلى آخره، بعدين بتطلع معاك شو؟
+  vocabulary of of terms، هاي الـ vocabulary، شان الـ vocabulary؟ يعني
+  مجموعة الكلمات المختلفة بترتيب معين طبعاً، هاي تنسهاش، يعني الـ it،
+  بعدين الـ I، طبعاً الترتيب اللي بدّك إياه مش مهمّ أن يجد قبل الثانية،
+  بس أنا بهمني إنّه حط ترتيب معين و أضل ماشي عليه، ماشي عليه. ليه؟ عشان
+  لما أجيب لك هادا الـ document الاسمه d1، أمثلّب vector كيف بيكون شكله؟
+  6 بعدين 5 بعدين 4، vector, vector of number. لان إذا بغير ترتيب
+  الكلمات، شو بصير هون؟ راح يتغير ترتيب الأرقام اللي هون. فأنا بثبتهم
+  مرة واحدة، وبصير هادا الـ document هاي الـ vector رعطانيها. document
+  ثاني، human ثاني، بعطيني vector ثاني، بنفس ترتيب الكلمات لكن مع اختلاف
+  الـ frequency الأرقام. فإذاً هاي من أبسط شايف موضوع الـ feature
+  representation في الـ NLP مهم، في عدة طرق how to represent the
+  feature. the feature. أبسط إشي عشان أحول الكلمات لأرقام عدّ ويبني في
+  vector. طبعاً ماله هذا الـ vector بيكون؟ ماله؟ كبير، high-dimensional،
+  وهاي ممكن تكون مشكلة. طيب، خلينا إذاً هلّا تخيّلنا كيف نعمل
+  representation للـ document باستخدام الـ back-of-word. back of word.
+  ها بتصير بتصير ببساطة هاد الموديل اللي بدك تبنيه اللي إحنا بنركز ع الـ
+  naive base أولها، أعطيه كل كلمة كم مرة تكرارها الـ vector يعني معنى
+  آخر، دي أعطيك الـ class، positive مثلاً negative إذا كان الـ sentiment
+  analysis. طيب نراجعكم في الـ base rule سريعاً، الـ base rule شو بتحكي؟
+  شو بتحكي؟ إنت مهتم تعرف الـ class given document، مهتم تعرف شو هو الـ
+  class لـ document معين، صح؟ كم class عندك؟ C1 و C2 مثلاً. إذا حسبت الـ
+  probability للـ C1 عند الـ document هات، والـ probability للـ C2 الـ
+  C2 عند الـ document، عند دفس الـ document، وكانت الـ probability للـ
+  C1 أكبر من الـ probability للـ C2 عند دفس الـ document، شو بتستنتج؟
+  إنّه هاد الـ document الـ class إلّه C1، باختصار، أنا شو هدفي إذن؟
+  هدفي إني أعمل الـ quantification لهالّ الـ model P capital هاي، أحسب
+  الـ model، أنشئ الـ model، بنشأ الموديل، كيف بنشأه هذا الموديل؟ من هاي
+  المعادلة، من الـ base rule. طب، اطلّع على هذا الشق، هذا الشق الأيسر
+  اللي حكينا عنه إذاً، هذا الشق الأيسر، خلينا نشوف الشق الأيمن هلّا، هذا
+  بسمّه posterior probability أو الـ posterior probability، هذا الشق
+  الأيمن هو تطبيق قاعدة الـ base rule الـ Bayes rule. الـ prior ضرب الـ
+  likelihood على إيش؟ الـ marginalization factor اللي بعمل لك
+  normalization. يعني إنت شوف شو بدّك إنت probability الـ class صح؟
+  هيّها، بس هيّ شو هيّ؟ هاي المعلومات المسبقة عندك عن الـ probability
+  لهذا الـ class، اللي مش محدّثي الـ prior السابقة، إنت عدّلتها هون لما
+  ضربتها في هاي في الـ likelihood، عدّلتها بما يتناسب مع محتويات الـ
+  document، الـ document، هذا بصمّوه الـ likelihood. تتذكروا اللي ما
+  أخدتوا الـ Bayes rule؟ كدّيش احتمالية إنها تمطر الدنيا؟ 50%، 50%.
+  كدّيش احتمالية إنها تمطر given إنّه شتاء الدنيا؟ بترتفع الـ
+  probability يعني، بتزيد، بتصير أضق. الـ stock. نفس الاشي، احتمالية
+  إنّه الـ class C1 50% مثلاً، لكن احتمالية الـ class C1 given إنّه هاي
+  الكلمات اللي في الـ document، أنا بعدّل أنا الـ probability هاي عشان
+  تتناسب أكثر مع الـ document. هلّا هون شو؟ هدولة بكفّوا، بس هاي المقام
+  المقام عشان أعمل normalization ويرجع هاي الـ probability تكون
+  probability distribution that sums up to 1. بدونها بكونش المجموع 1 عند
+  كل classes. إذاً هاي الـ Bayes rule بدنا نستخدمها في الـ naive Bayes.
+  طبعاً شو بيحكينا في هاد الـ في هاد الـ slide؟ في هذا الـ slide. راح بس
+  شايفين اللي حكيناه هون؟ إني أكبر، حطّهم بشكل arg max، بدّك تلف على كل
+  الـ classes، class class، وتجرّب الـ probability هاي عند كل الـ class،
+  مرّة عند الـ c1، مرّة عند الـ c2، بعدين اللي بعطيك الـ probability الـ
+  class اللي بعطيك probability أعلى بترجّه. بترجع. Max ما أبستيو،
+  أبستيو، أبستيورياري اسمها. فاللي بعطيك الـ class الـ probability الـ
+  class اللي بعطيك probability أعلى بترجع الـ class. هاي arg max. أنا ما
+  أديش بالنهاية الـ probability. شو بدي؟ بدي الـ class اللي أعطى أعلى
+  probability. الـ classes هذوّت، فمش راح يعني يأثر بالضبط constant
+  هذوّت، فشاله، شو ظل عندي؟ ظل عندي هذولا الـ 22، احتمالية الـ document
+  given الـ class، واحتمالية الـ class. ودهن هاذو سمّه الـ maximum a
+  posteriori most likely class. class، هاي الـ base rule طبّقها هون
+  droping that denominator. إذاً شو صفّه عنده بالنهاية؟ هو جدل الـ class
+  اللي بعطيك على probability من ناتج ضرب هاي مع هاي. طبعاً الـ d فرطها
+  هون الـ d فرطها الكلمة الأولى، الكلمة الثانية لحدّ الكلمة n في الـ
+  document. في الـ document. هل مراعي الترتيب هو لحد هلّا ولا لأ؟ حد هاي
+  اللحظة مراعي ترتيب الكلمات في الـ document. إذن لإنّه شو هاي؟
+  احتمالتين تكون الكلمة الأولى x1، والكلمة الثانية x2 إلى آثار. إلى آخر.
+  document دي represents as features، feature vector زي ما حكينا،
+  document دي مجموعة من الأرقام. هلأ بدي أورجيك ليش راح للنيفه، هون من
+  هاي الـ slide، بده يحكي لي ليش ما طبقش الـ Bayes rule زي ما هي، ما هي،
+  وراح أستخدم إشي نيّيّف، يعني باستخدام الـ back of word. بسألك أسئلة،
+  how often does this class occur؟ يعني هاي. يعني يعني بده يقول لك كيف
+  بدك تحسب هالي؟ probability لـ class، شو رأيكم؟ يعني أنا عندي training
+  dataset هيك صح؟ هيك شكلها، هذا الـ document الأول، هذا الثاني إلى
+  آخره، وعندي مثلاً c1، c1، c2 إلى آخره، وجيت قلتلك روايتي للـ c تساوي
+  c1، شو بتحكيلي؟ شو بتحكيلي؟ بالضبط، كم مرة تكررت C1 على عدد كل الـ
+  documents؟ بتطلع عندك الـ probability للـ C1، وبالتالي بتحسب الـ C2
+  إلى آخره بنفس الطريقة، قديش مجموع الـ probabilities لكل الـ classes؟
+  It should sums up to 1. إذن هاي سهل، هاي سهل حسابها. ‫ليسهل حسابها. ‫ـ
+  We can just count the relative frequencies in a corpus. ‫زي ما عملنا،
+  اللي إجاهلّي، إجاهلّي على الثاني هالـ، ‫كيف بدنا نحسب، هاي الـ P
+  اتّفقنا كيف نحسبها، ‫قبل شوية شوفنا، كيف نعملها كونتـ، هاي الـ P هاي
+  الـ P، قصّلك تحكيها بطريقة ثانية، هاي إذا بدّك تحلّليها بكلمات بسيطة،
+  قدّيش احتمالية إنّه هاي الكلمات تيجي في هذا الترتيب؟ هذا الترتيب في
+  الـ documents اللي إلهم class C بس. تمام، إذا ما تتفكين إحنا شو معناها
+  بس بقول لك هون في مشكلة عندنا space، space complexity عالي، يعني لو
+  بدك تفكر فيها، لو بدك تبني هذا الموديل بتعمل لك quantification، بتبني
+  الـ Model B هذا، الـ P هذا، عدد الـ probabilities اللي بدّك تحسبها
+  وتخزّنها، قديش؟ X طول الـ حجم الـ vocabulary للقوة N ضرب عدد الـ
+  classes. classes. إنت متخيل لو كان عندك vocabulary حجمها 10,000 كلمة،
+  ها، والـ document اللي بين إيديك، أيّا، هاي 10,000 كلمة، والـ document
+  اللي بين إيديك طوله 100 كلمة، 100 كلمة، وعندك مثلاً 5 classes، C1، C2،
+  لحد C5، تخيّل كدّيش هاد الرقم كبير؟ تخيّل كدّيش بدّه space إنّك
+  تخزّنه؟ كل space مندّبرها، بس وين مشكلة؟ كدّيش الـ computation كيف
+  بدّي أحسبهم هدول؟ ‫بيتحسبهم هدول. ‫كل مندبرها ومنلف for loop مع spark
+  مع barrel processing ‫مندبّر، منلف ومنحسبهم. ‫بس المشكلة الأكبر وين؟
+  ‫إنه فيش عندك enough evidences to quantify and calculate these
+  probabilities. ‫هده منحكي ليش. هلّا منحكي ليش؟ إذاً could only be
+  estimated، طبعاً عرفنا كيف هاي المعادلة إيجت، يعني لو بدك تفكّر فيها
+  شوية هيك accounting methods، افرض إنّه كل الـ documents حجمهم ثابت n،
+  آه؟ وكل كلمة وكل موقع في الـ document كم احتمال له؟ بعدد الكلمات
+  المختلفة، مزبوط؟ فيه مزبوط، وهي بعدد الـ يعني V ضرب V ضرب يعني X ضرب X
+  ضرب X، n من المربع. طب ليش ضربها بعدد الـ classes؟ لأنه كل permutation
+  بدّه يتكرّر عند كل class. إذاً عرفنا إنّه فيه عندنا مشكلة في الـ space
+  هون، space هون إذا بدّي، إذا بدّي أراعي ترتيب الكلمات. Could only be
+  estimated if a very very large number of training examples was
+  available. يعني بمختصر بقولّك إذا عندك computation power عالي وإذا
+  عندك space، بتقدر تحسب هاي الـ probabilities، بس بشرط بس بشرط إنّيكون
+  عندك unlimited number of documents. فكر فيها، منطقية. ليه؟ لأنّه أنا
+  لو أعطيك مثلاً document في الـ training dataset، هقولّك هذا class C1،
+  الـ document فيه ترتيب من الكلمات، صح؟ هل فيه احتمالية إنّه في الـ
+  test dataset يطلع عندك document document بشبه بالضبط هذا الـ document
+  الـ training dataset صعب جداً تقترب من 0 إذا ما كانتش 0. فبالتالي عشان
+  أجيب هاي الـ case بدي عدد لا نهائي من الـ documents، وهو ضي إشي
+  impossible. طبعاً إذا في عندك عدد لا نهائي من الـ documents وطبقت الـ
+  base rule عهاي المعادلة بضمن لك بمنضلك إنه فيه، يكون في عندك نتائج
+  أفضل من أفضل large language model موجود عندك حالياً. ليه؟ لأنه هاي
+  very strong statistical method ومعروف يعني كيف جد. بس للأسف ما عندي لا
+  space أقدر أخزن فيها ولا computation power لأنه أنا inference بديّه
+  برضه يكون prompt يعني سريع. سريع، ولا عندي unlimited number of
+  documents، فتطبيقه في هاي الكيس untractable بسهو، practically does not
+  make any sense. طيب شو بدّي أعمل إذا؟ بدّي أعمل relaxation assumption
+  تبع الترتيب الكلمات، بدّي أفترض إنّه ترتيب الكلمات مش موجود، لما أعمل
+  هاي الحركة ‫مهي الحركة؟ أفترض إنّه الكلمات لا تعتمد على بعض، ‫يعني
+  ظهور الكلمة في موقع معين ما بيأثر عليه الكلمة اللي قبلها واللي بعدها،
+  ‫أو الكلمات اللي بعدها، أو الكلمات اللي قبلها، ‫منطقنا هي بطبّق شو؟
+  الـ conditional independence. ‫عادة معروف الـ conditional independence
+  في probability theory. theory. يعني بفترض إنّها هاي الـ features أو
+  الـ random values independent of each other given a certain event.
+  فبقى أنا شو معناها إذاً؟ هذا الـ document في الـ كلمات اللي فيه بتفترض
+  الـ كلمات ملهاش تأثير على بعض عند class معين. إذا عملت هذا الافتراض،
+  طبعاً هذا الافتراض الافتراض مش دامل منطقه، في حالات بيكون فيها منطقه،
+  زي مثلاً text classification، يعني أنا والله جبتلك very simple
+  problem، قلتلك عندك documents، إشي مكتوب للـ sport وإشي مكتوب للـ
+  computer، وبنيلي classifier. الـ classifier. مش سهل، مش سهل عليه إنّه
+  إذا بيشوف بعض الكلمات هون أعرف إنّه sport، هل مهمّ إنّه هاي الكلمة إجت
+  قبل الثاني؟ مش مهمّ، بس موجودها وتكرار موجودها هو اللي مهم، عشان هيك
+  هاد الـ هاد الـ assumption still valid في حالات كثير. فإذاً لما أفترض
+  هاد الافتراض، الافتراض، شو بتتحول هاي الـ الـ joint probability هاي
+  كيف تصير باستخدام الـ independence assumption؟ probability لـ الـ
+  variable أول given c ضرب، الـ probability الـ variable الثاني given c
+  given الـ class إلى آخره. فإذا أنا بطّرت عندي joint probability
+  distribution for a long time. مش نفرطها؟ يعني شو، شو احتمالية ألقيت
+  حجر النار مرتين إنت صح؟ شو احتمالية إنه يطلع هد مع هد؟ شايف جوينت أنا
+  هد مع هد، شايف جوينت هاد؟ بتكون لي ربع، ربع مزبوط، بس كيف جبتها ربع؟
+  جيبتها ربعه، لأنه قلتلي أصلاً ظهور الـ ظهور الحدث الأول ما يأثرش على
+  الثاني، فإنت طبقت الـ independence اللي هو هاي ضرب هاز، نص ضرب نص، يفس
+  الاشي هون. طيب إذاً صارت الأمور سهلة، هلأ لو أنا أنا بصلت أتطلع على
+  الـ likelihood مش هيك، مش هيك، كيف بطلّع عليها likelihood؟ هيك، هل سهل
+  أحسب واحدة منهم هدول؟ مش سهل جداً، يا هل بدك تفكر فيها؟ عدد مرّات ظهور
+  هاي الكلمة في كل الـ documents من الـ classing، بس لا شوفت كلمة قبلها
+  ولا بعدها، بس كانت تعدّ على العدد. السلاد السابق. وهاي اتفقنا الـ
+  prior سهل إنّا عملها estimation. هلأ هادا شو بسمّه multinomial naive
+  base؟ ليش multinomial؟ لإنّه في عندك إنت multiple classes، class C1,
+  2, 3 إلى آخر. و 3 إلى آخره. هلأ هاذا الحكي لما تشوف argmax, argmax و
+  p، إنت بدك تتخيل إنها قادمة نعمل إحنا inference، شو يعني inference؟
+  يعني أعطيك هالـ documents، اضرب، وكرّر لي بالنهاية a class. على افتراض
+  إنّه p هذولا موجودات عندي. الموجودات عندي. يعني حقاً دي بنعمل
+  inference على افتراضنا الموجودات، بس شو لو بنندرسه كمان شوي؟ كيف ننعمل
+  parameter estimation؟ كيف ننحسب هدول؟ النهاية الـ slide برضه بيحكي عن
+  الـ inference إذا عندك test إنت document، بقول لك يعني بالنهاية حول،
+  حول الكلمات لـ positions، كيف حكينا لكم إحنا قبل شوي قبل شوي، إنّه
+  الكلمات اللي بتكون واجودة في الـ document إلّها ترتيب معيّن، فإنت
+  بتمشي على كلمة كلمة في الـ document، وبتشوف احتمالية كل كلمة، يعني هون
+  هادا زي implementation tricks بس بدّي أحكي لك إنّه كل document هو
+  sequence of words، كل كلمة إلّها موقع. ‫إلها موقع. ‫في هون عنده مشكلة،
+  حكينا عنها إحنا المحاضرة الماضية بس بيعدلي إياها، ‫شو المشكلة؟ ‫لما
+  أطبّق هاي المعادلة في الـ inference، ‫إنّه لما يكون إنت حجم الـ
+  document عندك كبير، 100 كلمة، 200 كلمة، 200 كلمة، رح تضرب عدد كبير من
+  الـ probabilities مع بعض، ها؟ رح يصغروا، ورح يصير under flow الكمبيوتر
+  مش راح يشوف ويأخذها كقيمة، بيحولها لـ 0، ولما بتحولها لـ 0، بتضرب كل
+  المعادل، كلها بتصير zeros، وشو بأخذها هو؟ بأخذ الـ log لهذا المقدار،
+  هذا المقدار. فإذاً بعد ما يأخذ الـ log حتى لكل المقدار، هذا معهد.
+  بيحول الضرب فعلاً لزائد، فبصير في عندك هاي نزلة زي ما هي، بصير في عندك
+  log لـ prior زائد مجموع الـ log لكل لكل احتمالية عندي. إذاً، بنهاية رح
+  تصفي نفس النتيجة، أنا ما باهمنيش ضلّيتك تضرب probability مع بعض ولا
+  أخدت الـ log. الـ relative frequencies رح يبضل نفسها، والـ class الـ
+  والـ class اللي كان يأخذ أعلى probability رح يضلّ يأخذ أعلى log. log.
+  إذاً هاضا اللي حكيناه اللي حكيناه. هلّأ إحنا حكينا عالـ inference،
+  تمام؟ هلّأ الـ layering الـ model parameter estimation. estimation.
+  إذاً learning the multinomial naive Bayes model استخدام الـ maximum
+  likelihood estimate. هلّأ بما إنّي أنا افترضت، يعني هيك فكر فيه يعني
+  افترضت إنّه فيلمات وترتيبها مش مهم، ومش مهم، صار في عندي evidence تكون
+  ممكن أحسب منها الـ properties بطريقة أفضل. يعني هون شو، شو إجا حكالك؟
+  الـ prior باختصار زي ما اتفقنا كيف نحسبها؟ عدد الـ documents اللي
+  كانوا إلهم class cj على كل عدد الـ documents. طيب، اللي هو likelihood
+  likelihood أو كل factor في الـ likelihood، طبعاً ليش حطّهون hat؟ بدي
+  أوجّلك إنّه هاد estimate at the end. شو احتمالية وجود كلمة i في class
+  J؟ بتعدّلّي كم مرّة انذكّرت كلمة i في كل الـ documents اللي هم class
+  J، على شو عدد الكلمات الكلّي وين؟ في class J. شيء، هاي اللي بدك تفكر
+  فيها، شو هي هاي؟ هاي عدد، عدد الكلمات في class J، لأنّك إنت بتلف على
+  كل كلمة في الـ vocabulary، بتعد كم مرة تكررت في هاد الـ class، شو
+  معناته؟ معناته المقام هو عدد الكلمات في كل الـ documents اللي لهم
+  class J. J. وهذا اللي أصلاً حكينا عنه قبل شوي، شو تعرف هاي الـ
+  probability؟ احتمالية حدوث هاي الكلمة من ضمن كل الكلمات اللي موجودة في
+  class J. سهل أحسب هدولاً؟
+
+========================================================================
+END OF REPORT
+========================================================================

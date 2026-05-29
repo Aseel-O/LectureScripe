@@ -1,0 +1,38 @@
+# ==========================================
+# AUDIO & DATA EXCLUSIONS
+# ==========================================
+data/*.wav
+data/*.mp3
+data/*.flac
+
+# ==========================================
+# MODEL & CHECKPOINT EXCLUSIONS
+# ==========================================
+whisper-lora-ar-ps/
+whisper-merged-ar-ps/
+checkpoint-*/
+runs/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+
+# ==========================================
+# PYTHON & ENVIRONMENT EXCLUSIONS
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ==========================================
+# SYSTEM EXCLUSIONS (MAC OS)
+# ==========================================
+.DS_Store

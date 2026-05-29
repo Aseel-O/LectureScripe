@@ -1,0 +1,52 @@
+================================================================
+WHISPER FINE-TUNING RESULTS
+================================================================
+Profile         : local_test
+Base model      : openai/whisper-large-v3
+Language / task : arabic / transcribe
+
+── LoRA Configuration ──────────────────────────────────────
+  r              : 16
+  alpha          : 32
+  dropout        : 0.05
+  target modules : ['q_proj', 'v_proj']
+
+── Training Configuration ──────────────────────────────────
+  Epochs                     : 10
+  Batch size (per device)    : 2
+  Gradient accumulation      : 8
+  Effective batch size       : 16
+  Learning rate              : 0.0001
+  LR scheduler               : linear
+  Warmup steps               : 5
+
+── Dataset Split ───────────────────────────────────────────
+  Total records  : 200
+  Train segments : 121
+  Dev segments   : 39
+  Test segments  : 40
+  Seed           : 42
+
+── Training Metrics ────────────────────────────────────────
+  epoch                              : 6.262295081967213
+  total_flos                         : 2.58903821647872e+18
+  train_loss                         : 0.9319652795791626
+  train_runtime                      : 683.9805
+  train_samples_per_second           : 1.769
+  train_steps_per_second             : 0.117
+
+── Test Metrics ────────────────────────────────────────────
+  epoch                              : 6.2623
+  test_cer                           : 0.4534
+  test_cer_norm                      : 0.3014
+  test_loss                          : 0.6243
+  test_runtime                       : 177.8548
+  test_samples_per_second            : 0.2250
+  test_steps_per_second              : 0.1120
+  test_wer                           : 0.4905
+  test_wer_norm                      : 0.3545
+
+── Output Paths ────────────────────────────────────────────
+  LoRA adapter : ./whisper-lora-ar-ps/final_adapter
+  Merged model : ./whisper-merged-ar-ps
+================================================================

@@ -1,0 +1,69 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# requirements-mac.txt
+# Mac M5 Pro  |  48 GB unified memory  |  macOS 15+  |  Python 3.11+
+#
+# Install with:
+#   pip install -r requirements-mac.txt
+#
+# PyTorch ships with MPS support built-in on Mac — no CUDA index URL needed.
+# MPS backend is stable on PyTorch 2.3+ for transformer fine-tuning.
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Core ML framework ─────────────────────────────────────────────────────────
+# MPS (Metal Performance Shaders) backend is bundled in the standard Mac wheel.
+# Do NOT add --index-url or +cu* suffix — those are CUDA-only builds.
+torch>=2.3.0
+torchvision>=0.18.0          # pulled as dep by some HF packages
+torchaudio>=2.3.0            # consistent version with torch
+
+# ── HuggingFace stack ─────────────────────────────────────────────────────────
+transformers>=4.40.0         # WhisperForConditionalGeneration, Seq2SeqTrainer
+peft>=0.10.0                 # LoraConfig, get_peft_model, PeftModel
+datasets>=2.18.0             # Dataset, DatasetDict
+accelerate>=0.29.0           # backend for Trainer device placement
+evaluate>=0.4.1              # WER / CER metrics
+huggingface-hub>=0.22.0      # model download, caching
+
+# ── Audio processing ──────────────────────────────────────────────────────────
+librosa>=0.10.1              # audio loading, resampling
+soundfile>=0.12.1            # wav/flac/ogg read-write backend for librosa
+audioread>=3.0.0             # fallback audio decoder (mp3 etc.)
+
+# ── Evaluation ────────────────────────────────────────────────────────────────
+jiwer>=3.0.3                 # WER / CER / MER computation (Stage 1 — ASR)
+rouge-score>=0.1.2           # ROUGE-L for summarization evaluation (Stage 2) changed from 0.1.2 to 0.1.3 to avoid a warning about Python 3.11 support
+bert-score>=0.3.13           # BERTScore for summarization evaluation (Stage 2)
+
+# ── Summarization (Stage 2) ───────────────────────────────────────────────────
+sentencepiece>=0.1.99        # required by mBART tokenizer (MBart50TokenizerFast)
+                             # also required by moussaKam/AraBART tokenizer
+mlx-lm>=0.15.0               # Qwen2.5-7B on Apple Silicon via MLX backend
+                             # loads mlx-community/Qwen2.5-7B-Instruct-4bit
+                             # ~3.8 GB unified memory, 3-5× faster than MPS/PyTorch
+                             # Apple Silicon (M1+) only — Intel Macs: omit this line
+                             # run_summarization.py falls back to PyTorch if not installed
+# Qwen2.5-7B-Instruct loads via AutoModelForCausalLM — no extra install needed.
+# With mlx-lm: expect ~5-15s per summary on M5 Pro (vs ~30-60s on MPS/float32).
+# bitsandbytes is CUDA-only and does NOT work on MPS — intentionally excluded.
+tensorboard>=2.16.0          # training curve logging
+matplotlib>=3.8.0            # optional — used in explore_dataset.ipynb
+google-genai>=0.1.0       # Gemini-3.5 summarization normalization (normalize_summaries.py)
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+numpy>=1.24.0,<2.0.0         # <2.0 avoids breaking changes in some HF internals
+tqdm>=4.66.0                 # progress bars
+regex>=2023.12.25            # used internally by tokenizers
+packaging>=23.0              # version checks inside HF libraries
+
+# ── Notebook support (for explore_dataset.ipynb) ──────────────────────────────
+jupyter>=1.0.0
+ipykernel>=6.29.0
+ipywidgets>=8.1.0            # tqdm notebook progress bars
+seaborn>=0.13.0              # dataset visualization 
+# ══════════════════════════════════════════════════════════════════════════════
+# macOS system dependency (install via Homebrew, not pip):
+#   brew install ffmpeg
+#
+# ffmpeg is required by librosa for MP3/M4A/AAC audio files.
+# If your segments are already .wav or .flac you can skip this.
+# ══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,52 @@
+================================================================
+WHISPER FINE-TUNING RESULTS
+================================================================
+Profile         : cluster
+Base model      : openai/whisper-large-v3
+Language / task : arabic / transcribe
+
+── LoRA Configuration ──────────────────────────────────────
+  r              : 16
+  alpha          : 32
+  dropout        : 0.05
+  target modules : ['q_proj', 'v_proj']
+
+── Training Configuration ──────────────────────────────────
+  Epochs                     : 20
+  Batch size (per device)    : 4
+  Gradient accumulation      : 4
+  Effective batch size       : 16
+  Learning rate              : 0.0001
+  LR scheduler               : linear
+  Warmup steps               : 50
+
+── Dataset Split ───────────────────────────────────────────
+  Total records  : 300
+  Train segments : 221
+  Dev segments   : 39
+  Test segments  : 40
+  Seed           : 42
+
+── Training Metrics ────────────────────────────────────────
+  epoch                              : 11.0
+  total_flos                         : 8.30336662831104e+18
+  train_loss                         : 0.5176970246550324
+  train_runtime                      : 1372.3454
+  train_samples_per_second           : 3.221
+  train_steps_per_second             : 0.204
+
+── Test Metrics ────────────────────────────────────────────
+  epoch                              : 11.0000
+  test_cer                           : 0.1976
+  test_cer_norm                      : 0.1385
+  test_loss                          : 0.4826
+  test_runtime                       : 87.9687
+  test_samples_per_second            : 0.4550
+  test_steps_per_second              : 0.1140
+  test_wer                           : 0.3265
+  test_wer_norm                      : 0.2411
+
+── Output Paths ────────────────────────────────────────────
+  LoRA adapter : ./whisper-lora-ar-ps/final_adapter
+  Merged model : ./whisper-merged-ar-ps
+================================================================

@@ -1,0 +1,260 @@
+{
+  "pseudo_reference": "Model-Specific Reference -- Each model evaluated against its own summary on hand-corrected transcripts",
+  "bertscore_model": "aubmindlab/bert-base-arabertv02",
+  "rouge_metric": "rougeL",
+  "results": [
+    {
+      "run": "Baseline Whisper",
+      "model": "mBART",
+      "vs_reference": {
+        "rouge_1": 0.1775,
+        "rouge_2": 0.012,
+        "rouge_l": 0.1183,
+        "bertscore_f1": 0.587
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.1935,
+        "rouge_2": 0.0879,
+        "rouge_l": 0.1505,
+        "bertscore_f1": 0.5183
+      }
+    },
+    {
+      "run": "Baseline Whisper",
+      "model": "AraBART",
+      "vs_reference": {
+        "rouge_1": 0.3557,
+        "rouge_2": 0.0784,
+        "rouge_l": 0.1822,
+        "bertscore_f1": 0.6684
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.0873,
+        "rouge_2": 0.0352,
+        "rouge_l": 0.0699,
+        "bertscore_f1": 0.5126
+      }
+    },
+    {
+      "run": "Baseline Whisper",
+      "model": "Qwen",
+      "vs_reference": {
+        "rouge_1": 0.5217,
+        "rouge_2": 0.2857,
+        "rouge_l": 0.5217,
+        "bertscore_f1": 0.6984
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.1935,
+        "rouge_2": 0.0879,
+        "rouge_l": 0.1505,
+        "bertscore_f1": 0.5183
+      }
+    },
+    {
+      "run": "Fine-tuned Whisper",
+      "model": "mBART",
+      "vs_reference": {
+        "rouge_1": 0.2994,
+        "rouge_2": 0.0848,
+        "rouge_l": 0.2395,
+        "bertscore_f1": 0.6987
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.1818,
+        "rouge_2": 0.0825,
+        "rouge_l": 0.1212,
+        "bertscore_f1": 0.5175
+      }
+    },
+    {
+      "run": "Fine-tuned Whisper",
+      "model": "AraBART",
+      "vs_reference": {
+        "rouge_1": 0.5658,
+        "rouge_2": 0.2091,
+        "rouge_l": 0.3458,
+        "bertscore_f1": 0.8003
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.0912,
+        "rouge_2": 0.0212,
+        "rouge_l": 0.0632,
+        "bertscore_f1": 0.4905
+      }
+    },
+    {
+      "run": "Fine-tuned Whisper",
+      "model": "Qwen",
+      "vs_reference": {
+        "rouge_1": 0.7097,
+        "rouge_2": 0.5517,
+        "rouge_l": 0.7097,
+        "bertscore_f1": 0.7703
+      },
+      "vs_counterpart_model": {
+        "rouge_1": 0.1818,
+        "rouge_2": 0.0825,
+        "rouge_l": 0.1212,
+        "bertscore_f1": 0.5175
+      }
+    },
+    {
+      "run": "Reference (upper bound)",
+      "model": "Self",
+      "vs_reference": {
+        "rouge_1": 1.0,
+        "rouge_2": 1.0,
+        "rouge_l": 1.0,
+        "bertscore_f1": 1.0
+      },
+      "vs_counterpart_model": null
+    }
+  ],
+  "deltas": {
+    "qwen_finetuned_vs_baseline": {
+      "rouge_1_delta": 0.188,
+      "rouge_2_delta": 0.266,
+      "rouge_l_delta": 0.188,
+      "bertscore_delta": 0.0719
+    },
+    "mbart_finetuned_vs_baseline": {
+      "rouge_1_delta": 0.1219,
+      "rouge_2_delta": 0.0728,
+      "rouge_l_delta": 0.1212,
+      "bertscore_delta": 0.1117
+    },
+    "arabart_finetuned_vs_baseline": {
+      "rouge_1_delta": 0.2101,
+      "rouge_2_delta": 0.1307,
+      "rouge_l_delta": 0.1636,
+      "bertscore_delta": 0.1319
+    }
+  },
+  "code_switching": {
+    "baseline_data": {
+      "run_label": "Baseline Whisper",
+      "transcript": {
+        "cmi_approx": 0.0157,
+        "english_ratio_approx": 0.0157,
+        "mlu_switch": null,
+        "n_docs": 1,
+        "note": "approximated from key_terms_transcript and transcript_chars"
+      },
+      "summaries": {
+        "mbart": {
+          "cmi": 0.1363,
+          "mlu_switch": 9.0877,
+          "english_ratio": 0.1363,
+          "n_docs": 1
+        },
+        "arabart": {
+          "cmi": 0.1195,
+          "mlu_switch": 8.6571,
+          "english_ratio": 0.1195,
+          "n_docs": 1
+        },
+        "qwen": {
+          "cmi": 0.1121,
+          "mlu_switch": 8.1538,
+          "english_ratio": 0.1121,
+          "n_docs": 1
+        }
+      }
+    },
+    "finetuned_data": {
+      "run_label": "Fine-tuned Whisper",
+      "transcript": {
+        "cmi_approx": 0.0164,
+        "english_ratio_approx": 0.0164,
+        "mlu_switch": null,
+        "n_docs": 1,
+        "note": "approximated from key_terms_transcript and transcript_chars"
+      },
+      "summaries": {
+        "mbart": {
+          "cmi": 0.1655,
+          "mlu_switch": 5.971,
+          "english_ratio": 0.1655,
+          "n_docs": 1
+        },
+        "arabart": {
+          "cmi": 0.1718,
+          "mlu_switch": 6.532,
+          "english_ratio": 0.1718,
+          "n_docs": 1
+        },
+        "qwen": {
+          "cmi": 0.1864,
+          "mlu_switch": 6.5294,
+          "english_ratio": 0.1864,
+          "n_docs": 1
+        }
+      }
+    },
+    "reference_data": {
+      "run_label": "Reference (hand-corrected)",
+      "transcript": {
+        "cmi_approx": 0.017,
+        "english_ratio_approx": 0.017,
+        "mlu_switch": null,
+        "n_docs": 1,
+        "note": "approximated from key_terms_transcript and transcript_chars"
+      },
+      "summaries": {
+        "mbart": {
+          "cmi": 0.1616,
+          "mlu_switch": 5.5062,
+          "english_ratio": 0.1616,
+          "n_docs": 1
+        },
+        "arabart": {
+          "cmi": 0.1583,
+          "mlu_switch": 7.2458,
+          "english_ratio": 0.1583,
+          "n_docs": 1
+        },
+        "qwen": {
+          "cmi": 0.1,
+          "mlu_switch": 9.8182,
+          "english_ratio": 0.1,
+          "n_docs": 1
+        }
+      }
+    }
+  },
+  "transcript_cs": {
+    "baseline_transcript": {
+      "run_label": "Baseline Whisper",
+      "cmi": 0.1148,
+      "mlu_switch": 9.445,
+      "english_ratio": 0.1148,
+      "n_docs": 1,
+      "method": "exact",
+      "variant": "base"
+    },
+    "finetuned_transcript": {
+      "run_label": "Fine-tuned Whisper",
+      "cmi": 0.2248,
+      "mlu_switch": 4.5953,
+      "english_ratio": 0.2248,
+      "n_docs": 1,
+      "method": "exact",
+      "variant": "finetuned"
+    },
+    "reference_transcript": {
+      "run_label": "Reference (hand-corrected)",
+      "cmi": 0.2367,
+      "mlu_switch": 4.1998,
+      "english_ratio": 0.2367,
+      "n_docs": 1,
+      "method": "exact",
+      "variant": "reference"
+    },
+    "transcript_ft_vs_base_delta": {
+      "english_ratio_delta": 0.11,
+      "cmi_delta": 0.11,
+      "mlu_switch_delta": -4.8497
+    }
+  }
+}
